@@ -1,33 +1,51 @@
-# gesture control python program for controlling certain functions in windows pc
-# Code by BalaAppu
-# Website: www.electronicshub.org
+import serial
+import time
+import pyautogui
+import sys
+print "start"
 
-import serial  # add Serial library for serial communication
-import pyautogui  # add pyautogui library for programmatically controlling the mouse and keyboard.
+speed = 0.5
+Pi_Serial = serial.Serial('com10',115200,serial.EIGHTBITS,serial.PARITY_NONE,serial.STOPBITS_ONE)
+time.sleep(1)
 
-Arduino_Serial = serial.Serial('com12', 9600)  # Initialize serial and Create Serial port object called Arduino_Serial
+def splitXY(str1):
+    xy = str1.split(",")
+    return xy
 
-while 1:
-    incoming_data = str(Arduino_Serial.readline())  # read the serial data and print it as line
-    print incoming_data  # print the incoming Serial data
+def move(xMovement,yMovement):
+    x,y = pyautogui.position()
+    pyautogui.moveTo(x+xMovement,y+yMovement,speed,pyautogui.easeOutQuad)
 
-    if 'next' in incoming_data:  # if incoming data is 'next'
-        pyautogui.hotkey('ctrl', 'pgdn')  # perform "ctrl+pgdn" operation which moves to the next tab
 
-    if 'previous' in incoming_data:  # if incoming data is 'previous'
-        pyautogui.hotkey('ctrl', 'pgup')  # perform "ctrl+pgup" operation which moves to the previous tab
+if Pi_Serial.isOpen():
+    Pi_Serial.close()
+    Pi_Serial.open()
+while True:
+    incoming_data = str(Pi_Serial.readline())
+    print incoming_data
+    if "," in incoming_data:  # "," only allowed in positions-statements
+        x,y = splitXY(incoming_data)  #splits String into x- and y-movement
+        move(x,y)  #moves mouse
+    else:
+        if 'next' in incoming_data:  # if incoming data is 'next'
+            pyautogui.hotkey('ctrl', 'pgdn')  # perform "ctrl+pgdn" operation which moves to the next tab
 
-    if 'down' in incoming_data:  # if incoming data is 'down'
-        # pyautogui.press('down')                   # performs "down arrow" operation which scrolls down the page
-        pyautogui.scroll(-100)
+        if 'previous' in incoming_data:  # if incoming data is 'previous'
+            pyautogui.hotkey('ctrl', 'pgup')  # perform "ctrl+pgup" operation which moves to the previous tab
 
-    if 'up' in incoming_data:  # if incoming data is 'up'
-        # pyautogui.press('up')                      # performs "up arrow" operation which scrolls up the page
-        pyautogui.scroll(100)
+        if 'down' in incoming_data:  # if incoming data is 'down'
+            # pyautogui.press('down')                   # performs "down arrow" operation which scrolls down the page
+            pyautogui.scroll(-100)
 
-    if 'change' in incoming_data:  # if incoming data is 'change'
-        pyautogui.keyDown('alt')  # performs "alt+tab" operation which switches the tab
-        pyautogui.press('tab')
-        pyautogui.keyUp('alt')
+        if 'up' in incoming_data:  # if incoming data is 'up'
+            # pyautogui.press('up')                      # performs "up arrow" operation which scrolls up the page
+            pyautogui.scroll(100)
 
-    incoming_data = "";  # clears the data
+        if 'change' in incoming_data:  # if incoming data is 'change'
+            pyautogui.keyDown('alt')  # performs "alt+tab" operation which switches the tab
+            pyautogui.press('tab')
+            pyautogui.keyUp('alt')
+
+    incoming_data = ""  # clears the data
+
+
