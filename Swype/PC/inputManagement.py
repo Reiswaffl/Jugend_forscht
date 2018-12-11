@@ -4,8 +4,8 @@ import pyautogui
 import sys
 print "start"
 
-speed = 0.5
-Pi_Serial = serial.Serial('com10',115200,serial.EIGHTBITS,serial.PARITY_NONE,serial.STOPBITS_ONE)
+speed = 0.4
+Pi_Serial = serial.Serial('com8',115200,serial.EIGHTBITS,serial.PARITY_NONE,serial.STOPBITS_ONE)
 time.sleep(1)
 
 def splitXY(str1):
@@ -14,7 +14,7 @@ def splitXY(str1):
 
 def move(xMovement,yMovement):
     x,y = pyautogui.position()
-    pyautogui.moveTo(x+xMovement,y+yMovement,speed,pyautogui.easeOutQuad)
+    pyautogui.moveTo(x+int(xMovement),y+int(yMovement),speed,pyautogui.easeOutQuad)
 
 
 if Pi_Serial.isOpen():
