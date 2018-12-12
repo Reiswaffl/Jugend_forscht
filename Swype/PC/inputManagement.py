@@ -26,7 +26,7 @@ while True:
     if "," in incoming_data:  # "," only allowed in positions-statements
         x,y = splitXY(incoming_data)  #splits String into x- and y-movement
         move(x,y)  #moves mouse
-    else:
+    else: #shortcuts
         if 'next' in incoming_data:  # if incoming data is 'next'
             pyautogui.hotkey('ctrl', 'pgdn')  # perform "ctrl+pgdn" operation which moves to the next tab
 
@@ -46,6 +46,15 @@ while True:
             pyautogui.press('tab')
             pyautogui.keyUp('alt')
 
+        if 'copy' in incoming_data: #if incoming data is 'copy'
+            pyautogui.keyDown('ctrl') #performs "ctrl+copy" operation which copies an object
+            pyautogui.press('c')
+            pyautogui.keyUp('ctrl')
+
+        if 'paste' in incoming_data: #if incoming data is 'paste'
+            pyautogui.keyDown('ctrl') #perform "ctrl+paste" operation which pastes an object
+            pyautogui.press('v')
+            pyautogui.keyUp('ctrl')
     incoming_data = ""  # clears the data
 
 
