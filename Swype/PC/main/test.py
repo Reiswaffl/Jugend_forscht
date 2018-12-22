@@ -1,5 +1,6 @@
-import reader
+import data
+import serialPi
+import mouseControl
 
-myClass = reader.Reader()
-print(myClass.getCommand("01"))
-print(myClass.getShortcut('01'))
+shortcut = 'ctrl,c'
+mouseControl.handleShortcut("hotkey",shortcut)

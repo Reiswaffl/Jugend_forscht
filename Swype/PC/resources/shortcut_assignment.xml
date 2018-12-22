@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <saves>
-    <shortcut id="01" command="hotkey">ctrl,c</shortcut>
-    <shortcut id="02" command="hotkey">ctrl,v</shortcut>
-    <shortcut id="03" command="scroll">i100</shortcut>
-    <shortcut id="04" command="scroll">i-100</shortcut>
-    <shortcut id="05"></shortcut>
-    <shortcut id="06"></shortcut>
-    <shortcut id="07"></shortcut>
-    <shortcut id="08"></shortcut>
+    <shortcut command="scroll" id="01">i100</shortcut>
+    <shortcut command="hotkey" id="02">ctrl,v</shortcut>
+    <shortcut command="scroll" id="03">i100</shortcut>
+    <shortcut command="scroll" id="04">i-100</shortcut>
+    <shortcut id="05" />
+    <shortcut id="06" />
+    <shortcut id="07" />
+    <shortcut id="08" />
 </saves>
