@@ -1,9 +1,18 @@
 import data
 import serialPi
 import mouseControl
-
+import logic
+import time
 shortcut = 'ctrl,c'
 #mouseControl.handleShortcut("hotkey",shortcut)
 
-mouseControl.scroll('i100')
-mouseControl.handleShortcut('scroll','i100')
+time.sleep(3)
+logic.handleInput('!01')
+logic.handleInput('!02')
+logic.handleInput('!01')
+logic.handleInput('!02')
+logic.handleInput('!01')
+logic.handleInput('!02')
+logic.handleInput('!01')
+logic.handleInput('!02')
+

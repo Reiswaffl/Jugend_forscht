@@ -1,5 +1,5 @@
 <saves>
-    <shortcut command="scroll" id="01">i100</shortcut>
+    <shortcut command="hotkey" id="01">ctrl,c</shortcut>
     <shortcut command="hotkey" id="02">ctrl,v</shortcut>
     <shortcut command="scroll" id="03">i100</shortcut>
     <shortcut command="scroll" id="04">i-100</shortcut>

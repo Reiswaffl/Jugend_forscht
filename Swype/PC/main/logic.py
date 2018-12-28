@@ -3,10 +3,10 @@ import serialPi
 import mouseControl
 
 serial = serialPi.Ser()
-serial.start()
+serial.start('com10')
 reader = data.Reader()
-def handleInput():
-    incoming_data = serial.getIncomingData()
+def handleInput(incoming_data):
+    #incoming_data = serial.getIncomingData()
     if ',' in incoming_data:
         #mouse movement
         x,y = incoming_data.split(',')
@@ -15,5 +15,5 @@ def handleInput():
         #shortcut
         id = incoming_data.replace('!','')
         command = reader.getCommand(id)
-        shortcut  = reader.getCommand(id)
+        shortcut  = reader.getShortcut(id)
         mouseControl.handleShortcut(command,shortcut)

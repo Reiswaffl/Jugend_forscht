@@ -12,7 +12,13 @@ def handleMouse(xMovement,yMovement,speed):
 
 
 def hotkey(shortcut):
-    pyautogui.hotkey(shortcut.split(','))
+    sh = shortcut.split(',')
+    if len(sh) == 2:
+        pyautogui.hotkey(sh[0],sh[1])
+    if len(sh) == 3:
+        pyautogui.hotkey(sh[0],sh[1],sh[2])
+    if len(sh) == 4:
+        pyautogui.hotkey(sh[0],sh[1],sh[2],sh[3])
 
 def scroll(shortcut):
     i = shortcut.replace('i','')
