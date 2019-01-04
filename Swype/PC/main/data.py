@@ -14,7 +14,6 @@ class Reader:
             self.doc = ET.parse(self.fullname)
         self.root = self.doc.getroot()
 
-<<<<<<< HEAD
     def getCOM(self):
         for child in self.root:
             if child.tag == 'COM':
@@ -22,9 +21,6 @@ class Reader:
         return None
 
     def getSaves(self):
-=======
-    def getCommand(self, id):
->>>>>>> 1ea3d717c570084d0b290468e5fe575a9b4de289
         for child in self.root:
             if child.tag == 'saves':
                 return child
@@ -35,37 +31,24 @@ class Reader:
                 return child.get('command')
         return None
 
-<<<<<<< HEAD
+
     def getShortcut(self,id):
         for child in self.getSaves():
-=======
-    def getShortcut(self, id):
-        for child in self.root:
->>>>>>> 1ea3d717c570084d0b290468e5fe575a9b4de289
             if child.get('id') == id:
                 return child.text
         return None
 
-<<<<<<< HEAD
     def setCommand(self,id,command):
         for child in self.getSaves():
-=======
-    def setCommand(self, id, command):
-        for child in self.root:
->>>>>>> 1ea3d717c570084d0b290468e5fe575a9b4de289
             if child.get('id') == id:
                 child.set('command', command)
                 self.doc.write(self.fullname)
                 return child.get('command')
         return None
 
-<<<<<<< HEAD
     def setShortcut(self,id, shortcut):
         for child in self.getSaves():
-=======
-    def setShortcut(self, id, shortcut):
-        for child in self.root:
->>>>>>> 1ea3d717c570084d0b290468e5fe575a9b4de289
+
             if child.get('id') == id:
                 child.text = shortcut
                 self.doc.write(self.fullname)
