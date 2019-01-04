@@ -1,9 +1,9 @@
 import Tkinter as tkr
 
 
-class userInterface():
+class userInterface(tkr.Tk):
     def __init__(self):
-        super().__init__()
+        tkr.Tk.__init__(self)
         self.SHORTCUTS = [
             "Shortcut1",
             "Shortcut2",
