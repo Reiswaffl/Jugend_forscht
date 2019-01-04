@@ -12,20 +12,31 @@ class Reader:
             self.doc = ET.parse(self.fullname)
         self.root = self.doc.getroot()
 
-    def getCommand(self,id):
+    def getCOM(self):
         for child in self.root:
+            if child.tag == 'COM':
+                return child.get('com')
+        return None
+
+    def getSaves(self):
+        for child in self.root:
+            if child.tag == 'saves':
+                return child
+        return None
+    def getCommand(self,id):
+        for child in self.getSaves():
             if child.get('id') == id:
                 return child.get('command')
         return None
 
     def getShortcut(self,id):
-        for child in self.root:
+        for child in self.getSaves():
             if child.get('id') == id:
                 return child.text
         return None
 
     def setCommand(self,id,command):
-        for child in self.root:
+        for child in self.getSaves():
             if child.get('id') == id:
                 child.set('command', command)
                 self.doc.write(self.fullname)
@@ -33,9 +44,13 @@ class Reader:
         return None
 
     def setShortcut(self,id, shortcut):
-        for child in self.root:
+        for child in self.getSaves():
             if child.get('id') == id:
                 child.text = shortcut
                 self.doc.write(self.fullname)
                 return child.text
         return None
+
+    def setCOM(self,com):
+        COM = self.getCOM()
+        COM.set('com',com)

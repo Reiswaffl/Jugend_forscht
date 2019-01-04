@@ -1,10 +1,14 @@
-<saves>
-    <shortcut command="hotkey" id="01">ctrl,c</shortcut>
-    <shortcut command="hotkey" id="02">ctrl,v</shortcut>
-    <shortcut command="scroll" id="03">i100</shortcut>
-    <shortcut command="scroll" id="04">i-100</shortcut>
-    <shortcut id="05" />
-    <shortcut id="06" />
-    <shortcut id="07" />
-    <shortcut id="08" />
-</saves>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+    <COM com="com10"/>
+    <saves>
+        <shortcut command="hotkey" id="01">ctrl,c</shortcut>
+        <shortcut command="hotkey" id="02">ctrl,v</shortcut>
+        <shortcut command="scroll" id="03">i100</shortcut>
+        <shortcut command="scroll" id="04">i-100</shortcut>
+        <shortcut id="05" />
+        <shortcut id="06" />
+        <shortcut id="07" />
+        <shortcut id="08" />
+    </saves>
+</root>
