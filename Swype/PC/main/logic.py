@@ -1,19 +1,25 @@
 import data
-import serialPi
+# import serialPi
 import mouseControl
+import userInterface
 
-serial = serialPi.Ser()
-serial.start('com10')
+# serial = serialPi.Ser()
+# serial.start('com10')
 reader = data.Reader()
+interface = userInterface.userInterface()
+interface.buildInterface()
+interface.mainloop()
+
+
 def handleInput(incoming_data):
-    #incoming_data = serial.getIncomingData()
+    # incoming_data = serial.getIncomingData()
     if ',' in incoming_data:
-        #mouse movement
-        x,y = incoming_data.split(',')
-        mouseControl.handleMouse(x,y,0.4) #0.4 as default now, maybe change later
+        # mouse movement
+        x, y = incoming_data.split(',')
+        mouseControl.handleMouse(x, y, 0.4) # 0.4 as default now, maybe change later
     if '!' in incoming_data:
-        #shortcut
+        # shortcut
         id = incoming_data.replace('!','')
         command = reader.getCommand(id)
-        shortcut  = reader.getShortcut(id)
+        shortcut = reader.getShortcut(id)
         mouseControl.handleShortcut(command,shortcut)
