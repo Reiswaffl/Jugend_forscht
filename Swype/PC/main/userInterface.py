@@ -1,7 +1,7 @@
-import tkinter as tkr
+import Tkinter as tkr
 
 
-class userInterface(tkr.Tk):
+class userInterface():
     def __init__(self):
         super().__init__()
         self.SHORTCUTS = [
