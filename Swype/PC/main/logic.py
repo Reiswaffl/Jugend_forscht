@@ -1,15 +1,11 @@
 import data
 import serialPi
 import mouseControl
-import userInterface
+
 
 serial = serialPi.Ser()
 reader = data.Reader()
 mouseSpeed = 0.4
-
-interface = userInterface.userInterface()
-interface.buildInterface()
-interface.mainloop()
 
 
 def start(com):
@@ -28,3 +24,7 @@ def handleInput():
         command = reader.getCommand(id)
         shortcut = reader.getShortcut(id)
         mouseControl.handleShortcut(command,shortcut)
+
+def writeShortcut(id,command,shortcut):
+    reader.setCommand(id,command)
+    reader.setShortcut(id,shortcut)

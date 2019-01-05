@@ -1,5 +1,5 @@
 import Tkinter as tkr
-
+import logic
 
 class userInterface(tkr.Tk):
     def __init__(self):
@@ -18,6 +18,8 @@ class userInterface(tkr.Tk):
     def select(self):
         print("selected " + self.var.get() + " for Shortcut 1")
         print("selected " + self.var2.get() + " for Shortcut 2")
+        logic.writeShortcut('01','hotkey',self.var.get())
+        logic.writeShortcut('02', 'hotkey', self.var2.get())
 
     def buildInterface(self):
         self.geometry("1500x1000")
