@@ -17,9 +17,6 @@ void loop()
 {
    if(digitalRead(2) == LOW)// Button pressed
    {
-      delay(500);
-      Serial.println("copy");
-      delay(100);
-      Serial.println("paste");
+      Serial.println("Hello!");
    }
 }

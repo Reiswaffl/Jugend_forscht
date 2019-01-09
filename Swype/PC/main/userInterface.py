@@ -1,6 +1,8 @@
 import Tkinter as tkr
 import logic
 
+
+
 class userInterface(tkr.Tk):
     def __init__(self):
         tkr.Tk.__init__(self)
@@ -14,7 +16,6 @@ class userInterface(tkr.Tk):
         self.var.set(self.SHORTCUTS[0])
         self.var2 = tkr.StringVar()
         self.var2.set(self.SHORTCUTS[1])
-
     def select(self):
         print("selected " + self.var.get() + " for Shortcut 1")
         print("selected " + self.var2.get() + " for Shortcut 2")
