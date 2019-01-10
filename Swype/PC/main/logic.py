@@ -29,3 +29,5 @@ def handleInput():
 def writeShortcut(id,command,shortcut):
     reader.setCommand(id,command)
     reader.setShortcut(id,shortcut)
+def getCOM():
+    return reader.getCOM()

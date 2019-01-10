@@ -1,5 +1,5 @@
 <root>
-    <COM com="com10" />
+    <COM com="COM8" />
     <saves>
         <shortcut command="hotkey" id="01">Shortcut1</shortcut>
         <shortcut command="hotkey" id="02">Shortcut2</shortcut>
