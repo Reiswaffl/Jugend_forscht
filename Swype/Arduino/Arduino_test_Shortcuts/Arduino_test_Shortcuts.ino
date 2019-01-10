@@ -18,7 +18,5 @@ void loop()
    if(digitalRead(2) == LOW)// Button pressed
    {
       Serial.println("100,100");
-      Serial.println(" 100,100");
-      Serial.println(" 100,100");
    }
 }

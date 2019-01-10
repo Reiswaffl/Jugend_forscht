@@ -17,10 +17,11 @@ class Ser:
                 self.Pi_Serial.open()
             return None
         except:
+            print('[Error]: Not able to start Serial-port')
             return "Error"
 
     def getIncomingData(self):
         try:
             return str(self.Pi_Serial.readline())
         except:
-            return None
+            return '-'

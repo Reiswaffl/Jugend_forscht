@@ -9,11 +9,12 @@ mouseSpeed = 0.4
 
 
 def start(com):
-    serial.start(com)
+     serial.start(com)
 
 
 def handleInput():
-    incoming_data = serial.getIncomingData()
+    incoming_data =  serial.getIncomingData()
+    print incoming_data
     if ',' in incoming_data:
         # mouse movement
         x,y = incoming_data.split(',')
