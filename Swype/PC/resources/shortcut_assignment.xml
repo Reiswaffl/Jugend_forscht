@@ -1,10 +1,10 @@
 <root>
     <COM com="COM8" />
     <saves>
-        <shortcut command="hotkey" id="01">Shortcut1</shortcut>
-        <shortcut command="hotkey" id="02">Shortcut2</shortcut>
-        <shortcut command="scroll" id="03">i100</shortcut>
-        <shortcut command="scroll" id="04">i-100</shortcut>
+        <shortcut command="hotkey" id="01">ctrl+c</shortcut>
+        <shortcut command="hotkey" id="02">ctrl+v</shortcut>
+        <shortcut command="hotkey" id="03">alt+f4</shortcut>
+        <shortcut command="hotkey" id="04">alt+tab</shortcut>
         <shortcut id="05" />
         <shortcut id="06" />
         <shortcut id="07" />
