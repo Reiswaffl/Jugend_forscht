@@ -80,10 +80,10 @@ class userInterface(tkr.Tk):
 
     def buildShortcutsStack(self,index, rowOffset, columnOffset):
         for i in range(4):
+            print(str(i) + "   " + str(i+index))
             self.shortcut[i+index] = tkr.OptionMenu(self,self.sh[i%4],*self.SHORTCUTS)
             self.shortcut[i+index].configure(font=("Arial", 16))
-            self.shortcut[i+index].grid(row=(rowOffset+i%4),column=columnOffset)
-
+            self.shortcut[i+index].grid(row=(rowOffset+(i%4)),column=columnOffset)
 
 
     def buildCommandsStack(self,index,rowOffset,columnOffset):
