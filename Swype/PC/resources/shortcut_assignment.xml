@@ -5,9 +5,9 @@
         <shortcut command="hotkey" id="02">ctrl+v</shortcut>
         <shortcut command="hotkey" id="03">alt+f4</shortcut>
         <shortcut command="hotkey" id="04">alt+tab</shortcut>
-        <shortcut id="05" />
-        <shortcut id="06" />
-        <shortcut id="07" />
-        <shortcut id="08" />
+        <shortcut command="hotkey" id="05">ctrl+c</shortcut>
+        <shortcut command="hotkey" id="06">ctrl+v</shortcut>
+        <shortcut command="hotkey" id="07">alt+f4</shortcut>
+        <shortcut command="hotkey" id="08">alt+tab</shortcut>
     </saves>
 </root>

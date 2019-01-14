@@ -12,8 +12,8 @@ ser = serial.Serial(
 time.sleep(1)
 
 def write_Shortcut(shortcutNumber):
-    ser.write(('SH' +shortcutNumber))
+    ser.write(bin('SH' +shortcutNumber + '\n'))
 
 def write_Movement(x,y):
-    ser.write(x + ',' + y)
+    ser.write(bin(x + ',' + y +'\n'))
 

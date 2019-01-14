@@ -30,3 +30,6 @@ def writeShortcut(id,command,shortcut):
     reader.setShortcut(id,shortcut)
 def getCOM():
     return reader.getCOM()
+
+def getShortCut(id):
+    return reader.getCommand(id), reader.getShortcut(id)
