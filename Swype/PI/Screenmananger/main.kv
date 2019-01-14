@@ -1,0 +1,107 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+ScreenManagement:
+    transition: FadeTransition()
+    MainScreen:
+    Calculator:
+
+<MainScreen>:
+    name: "main"
+    GridLayout:
+        rows: 1
+        Image:
+            source: 'shortcuts/copy.png'
+        Image:
+            source: 'shortcuts/paste.png'
+        Image:
+			source: 'shortcuts/numpad.png'
+        Image:
+            source: 'shortcuts/calculator.png'
+            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "calculator"
+
+
+<Calculator>:
+    name: "calculator"
+	GridLayout:
+	    cols: 6
+	    canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: 'calculator/1.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(1)
+        Image:
+            source: 'calculator/2.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(2)
+        Image:
+            source: 'calculator/3.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(3)
+        Image:
+            source: 'calculator/space.png'
+        Image:
+            source: 'calculator/space.png'
+        Image:
+            source: 'calculator/esc.png'
+            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "main"
+        Image:
+            source: 'calculator/4.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(4)
+        Image:
+            source: 'calculator/5.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(5)
+        Image:
+            source: 'calculator/6.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(6)
+        Image:
+            source: 'calculator/space.png'
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 0,0,0,.3
+                Rectangle:
+                    size: 100,50
+                    pos: self.x+96,self.y+50
+            size_hint_x: 2
+            text: root.text
+        Image:
+		    source: 'calculator/c.png'
+		    on_touch_down: if self.collide_point(*args[1].pos): root.reset()
+        Image:
+            source: 'calculator/7.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(7)
+        Image:
+            source: 'calculator/8.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(8)
+        Image:
+            source: 'calculator/9.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(9)
+
+		Image:
+			source: 'calculator/times.png'
+			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("*")
+		Image:
+			source: 'calculator/divide.png'
+			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("/")
+	    Image:
+            source: 'calculator/space.png'
+        Image:
+            source: 'calculator/space.png'
+		Image:
+			source: 'calculator/0.png'
+			on_touch_down: if self.collide_point(*args[1].pos): root.calculate(0)
+	    Image:
+            source: 'calculator/comma.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.calculate(14)
+        Image:
+			source: 'calculator/plus.png'
+			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("+")
+        Image:
+			source: 'calculator/minus.png'
+			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("-")
+        Image:
+			source: 'calculator/equals.png'
+			on_touch_down: if self.collide_point(*args[1].pos): root.giveresult()
