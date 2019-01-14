@@ -144,3 +144,5 @@ class userInterface(tkr.Tk):
             c,s = logic.getShortCut(str(i))
             self.sh[i].set(s)
             self.cmd[i].set(c)
+
+
