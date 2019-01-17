@@ -56,5 +56,6 @@ class Reader:
         return None
 
     def setCOM(self,com):
-        COM = self.getCOM()
-        COM.set('com',com)
+        for child in self.root:
+            if child.tag == 'COM':
+                child.set('com', com)

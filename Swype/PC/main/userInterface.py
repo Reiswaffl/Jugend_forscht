@@ -84,6 +84,8 @@ class userInterface(tkr.Tk):
 
     def start(self):
         if self.serialRunning == False:
+            print(self.comBox.get())
+            logic.setCOM(self.comBox.get())
             self.p = subprocess.Popen(['python', 'serialHandling.py', 'arg1', 'arg2'])
             self.startButton.config(text="stop Connection")
             self.serialRunning = True
@@ -123,7 +125,7 @@ class userInterface(tkr.Tk):
 
         self.comBox = tkr.Entry()
         self.comBox.grid(row=0, column=2)
-        self.comBox.insert(0,"COM1")
+        self.comBox.insert(0,logic.getCOM())
 
         self.startButton = tkr.Button(master=self,text="start Connection",command=self.start,font=("Arial",14))
         self.startButton.grid(row=0, column=3)
@@ -146,3 +148,6 @@ class userInterface(tkr.Tk):
             self.cmd[i].set(c)
 
 
+interface = userInterface()
+interface.buildInterface()
+interface.mainloop()
