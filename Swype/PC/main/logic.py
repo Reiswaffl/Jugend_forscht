@@ -9,7 +9,7 @@ mouseSpeed = 0.4
 
 
 def start(com):
-     serial.start(com)
+     return serial.start(com)
 
 
 def handleInput():

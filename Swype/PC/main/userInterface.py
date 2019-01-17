@@ -140,7 +140,7 @@ class userInterface(tkr.Tk):
         tkr.Label(self, text="Shortcut 5", font=("Arial", 16)).grid(row=1, column=3)
         tkr.Label(self, text="Shortcut 6", font=("Arial", 16)).grid(row=2, column=3)
         tkr.Label(self, text="Shortcut 7", font=("Arial", 16)).grid(row=3, column=3)
-        tkr.Label(self, text="Shortcut 8", font=("Arial", 16)).grid(row=4, column=3)
+
     def loadInformation(self):
         for i in range(8):
             c,s = logic.getShortCut(str(i))

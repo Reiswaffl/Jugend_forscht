@@ -59,3 +59,4 @@ class Reader:
         for child in self.root:
             if child.tag == 'COM':
                 child.set('com', com)
+                self.doc.write(self.fullname)

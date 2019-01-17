@@ -18,7 +18,7 @@ class Ser:
             return None
         except:
             print('[Error]: Not able to start Serial-port')
-            return "Error"
+            return "[Error]: Not able to start Serial-port"
 
     def getIncomingData(self):
         try:
