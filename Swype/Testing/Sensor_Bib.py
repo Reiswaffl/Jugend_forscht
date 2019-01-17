@@ -3,6 +3,7 @@ import time
 bus = smbus.SMBus(0)
 address = 0x10
 
+
 def write(value):
     bus.write_byte_data(address, 0, value)
     return -1

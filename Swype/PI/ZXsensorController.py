@@ -28,17 +28,13 @@ class SensorController:
         return self.activity
 
     def receiveZpos(self):
-        # self.gesture = self.bus.read_byte_data(0x10, 0x04)
         self.z_pos_old = self.z_pos
         self.z_pos = self.bus.read_byte_data(0x10, 0x0A)
-        # print("red zPos")
 
     def receiveGesture(self):
         self.gesture = self.bus.read_byte_data(0x10, 0x04)
-        # print("red gesture")
 
     def checkGesture(self):
-        # print("gesture: " +str(self.gesture))
         if self.gesture == 1:
             print("swipe")
         elif self.gesture == 2:
@@ -53,7 +49,6 @@ class SensorController:
             self.checkGesture()
         elif self.state == 1:
             dt = time.clock() - self.start_time
-            # print(dt)
             if self.receiveActivity():
                 if dt > 0.003:
                     self.state = 2
@@ -62,34 +57,34 @@ class SensorController:
                 self.state = 0
             self.checkGesture()
         elif self.state == 2:
-            if self.receiveActivity() == False:
+            if not self.receiveActivity():
                 self.state = 0
             elif self.z_pos > (self.pointZero + self.tolerance):
                 self.state = 3
             elif self.z_pos < (self.pointZero + self.tolerance):
                 self.state = 5
         elif self.state == 3:
-            if self.receiveActivity() == False:
+            if not self.receiveActivity():
                 self.state = 0
             elif self.z_pos > self.z_pos_old:
                 print("Lautstärke HOCH!")
             elif self.z_pos < (self.z_pos_old - (self.tolerance / 2)):
                 self.state = 4
         elif self.state == 4:
-            if self.receiveActivity() == False:
+            if not self.receiveActivity():
                 self.state = 0
             elif self.z_pos <= self.pointZero:
-                self.pointZero = self.z_pos  # 80
+                self.pointZero = self.z_pos
                 self.state = 2
         elif self.state == 5:
-            if self.receiveActivity() == False:
+            if not self.receiveActivity():
                 self.state = 0
             elif self.z_pos < self.z_pos_old:
                 print("Lautstärke RUNTER!")
             elif self.z_pos == (self.pointZero + (self.tolerance / 2)):
                 self.state = 2
         elif self.state == 6:
-            if self.receiveActivity() == 0:  # 90
+            if self.receiveActivity() == 0:
                 self.state = 0
             elif self.z_pos >= self.pointZero:
                 self.pointZero = self.z_pos
@@ -97,7 +92,6 @@ class SensorController:
             pass
         else:
             self.state = 0
-    # 98
 
 
 sensorController = SensorController()
