@@ -147,7 +147,8 @@ class userInterface(tkr.Tk):
             self.sh[i].set(s)
             self.cmd[i].set(c)
 
-
+    def updateGUI(self):
+        pass
 interface = userInterface()
 interface.buildInterface()
 interface.mainloop()
