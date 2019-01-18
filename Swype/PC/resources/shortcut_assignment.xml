@@ -4,9 +4,9 @@
         <shortcut command="hotkey" id="0">ctrl+c</shortcut>
         <shortcut command="hotkey" id="1">ctrl+v</shortcut>
         <shortcut command="hotkey" id="2">alt+f4</shortcut>
-        <shortcut command="hotkey" id="3">alt+tab</shortcut>
+        <shortcut command="program" id="3">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
         <shortcut command="hotkey" id="4">ctrl+c</shortcut>
-        <shortcut command="hotkey" id="5">ctrl+c</shortcut>
+        <shortcut command="hotkey" id="5">ctrl+v</shortcut>
         <shortcut command="hotkey" id="6">alt+f4</shortcut>
         <shortcut command="hotkey" id="7">alt+tab</shortcut>
     </saves>

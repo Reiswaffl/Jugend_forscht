@@ -1,12 +1,13 @@
-import data
-import serialPi
+import os
+import subprocess
 import mouseControl
 import logic
-import time
-shortcut = 'ctrl,c'
-#mouseControl.handleShortcut("hotkey",shortcut)
 
-reader = data.Reader()
-print(reader.getSaves())
-print(reader.getShortcut('01'))
-print(reader.getCOM ())
+c,s = logic.getShortCut('3')
+mouseControl.handleShortcut(c,s)
+
+'''
+command = "C:\umlet-standalone-14.3.0\Umlet\Umlet.exe"
+#os.system(command)
+subprocess.Popen([command])
+'''

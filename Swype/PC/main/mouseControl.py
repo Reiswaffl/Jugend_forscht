@@ -1,12 +1,13 @@
 import pyautogui
-
+import subprocess
 
 def handleShortcut(command, shortcut):
     if command == 'hotkey':
         hotkey(shortcut)
     if command == 'scroll':
         scroll(shortcut)
-
+    if command == 'program':
+        runProgramm(shortcut)
 
 def handleMouse(xMovement, yMovement, speed):
     x, y = pyautogui.position()
@@ -26,3 +27,6 @@ def hotkey(shortcut):
 def scroll(shortcut):
     i = shortcut.replace('i', '')
     pyautogui.scroll(int(i))
+
+def runProgramm(path):
+    subprocess.Popen([path])
