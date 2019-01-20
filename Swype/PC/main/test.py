@@ -3,7 +3,7 @@ import subprocess
 import mouseControl
 import logic
 
-c,s = logic.getShortCut('3')
+c,s = logic.getShortCut('2')
 mouseControl.handleShortcut(c,s)
 
 '''
