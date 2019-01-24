@@ -21,6 +21,10 @@ def handleInput():
     if '!' in incoming_data:
         # shortcut
         id = incoming_data.replace('!','')
+        id = id.replace(' ','')
+        iid = int(id)
+        id = str(iid)
+        print('-'+id+'-')
         command = reader.getCommand(id)
         shortcut = reader.getShortcut(id)
         mouseControl.handleShortcut(command,shortcut)

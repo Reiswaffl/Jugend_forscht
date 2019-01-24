@@ -12,13 +12,14 @@ def handleShortcut(command, shortcut):
 def handleMouse(xMovement, yMovement, speed):
     try:
         x, y = pyautogui.position()
-        pyautogui.moveTo(x + int(xMovement), y + int(yMovement), speed, pyautogui.easeOutQuad)
+        pyautogui.moveTo(x + int(xMovement), y + int(yMovement))
     except:
         pass
 
 def hotkey(shortcut):
     try:
-        sh = shortcut.split(',')
+        sh = shortcut.split('+')
+        print(sh)
         if len(sh) == 2:
             pyautogui.hotkey(sh[0], sh[1])
         if len(sh) == 3:

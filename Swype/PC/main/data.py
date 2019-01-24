@@ -25,9 +25,11 @@ class Reader:
             if child.tag == 'saves':
                 return child
         return None
-    def getCommand(self,id):
+
+    def getCommand(self, id):
         for child in self.getSaves():
             if child.get('id') == id:
+                print("triggered")
                 return child.get('command')
         return None
 
@@ -38,7 +40,7 @@ class Reader:
                 return child.text
         return None
 
-    def setCommand(self,id,command):
+    def setCommand(self, id,command):
         for child in self.getSaves():
             if child.get('id') == id:
                 child.set('command', command)

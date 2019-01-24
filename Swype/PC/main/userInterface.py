@@ -2,6 +2,7 @@ import Tkinter as tkr
 import logic
 import subprocess
 
+global p
 class userInterface(tkr.Tk):
     serialRunning = False
     def __init__(self):
@@ -57,12 +58,13 @@ class userInterface(tkr.Tk):
     def start(self):
         if self.serialRunning == False:
             print(self.comBox.get())
+            global p
             logic.setCOM(self.comBox.get())
-            self.p = subprocess.Popen(['python', 'serialHandling.py', 'arg1', 'arg2'])
+            p = subprocess.Popen(['python', 'serialHandling.py', 'arg1', 'arg2'])
             self.startButton.config(text="stop Connection")
             self.serialRunning = True
         else:
-            self.p.terminate()
+            p.terminate()
             self.startButton.config(text="start Connection")
             self.serialRunning = False
 
@@ -126,3 +128,5 @@ class userInterface(tkr.Tk):
 interface = userInterface()
 interface.buildInterface()
 interface.mainloop()
+global p
+p.terminate()
