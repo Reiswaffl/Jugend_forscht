@@ -1,55 +1,90 @@
 # coding=utf-8
-import time
+import RPi.GPIO as GPIO
+import serial
 import os
 os.environ['KIVY_GL_BACKEND'] = 'gl'
+import time
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.config import Config
 from kivy.properties import ObjectProperty
 
+# Touchpad wird initialisiert
 Config.set('graphics', 'width', '1024')
 Config.set('graphics', 'height', '600')
+print("Touchpad setup done")
 
+# GPIO setup; Widerstand wird initialisierd, Input festgelegt
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+print("GPIO setup done")
+
+shortcutTime = time.time()
+time.sleep(1)
+# USBController wird initialisiert
+#ser = serial.Serial(
+#    port='/dev/ttyAMA0',
+#    baudrate=115200,
+#    parity=serial.PARITY_NONE,
+#    stopbits=serial.STOPBITS_ONE,
+#    bytesize=serial.EIGHTBITS,
+#    timeout=1
+#)
+print("Serial initialisation done")
+
+def write_Shortcut(shortcut):
+    global shortcutTime
+    if time.time() > shortcutTime + 0.5:
+        print(shortcut)
+        if not shortcut=="c3":
+            shortcutTime = time.time()
+    #ser.write(bin('SH' + shortcutNumber + '\n'))
+
+def write_Movement(x, y):
+    global shortcutTime
+    if time.time() - 0.1 > shortcutTime:
+        print(x, y)
+    #ser.write(bin(x + ',' + y + '\n'))
+def write_release():
+    print("release all")
+    #ser.write(bin('SH' + shortcutNumber + '\n'))
+
+# Variablen werden initialisiert
 touch = False
 lasttime = 0
 previousValue = 0
 currentValue = 0
 operator = "+"
-
-
-def writeNumber(value):
-    # bus.write_byte(address,value)
-    print(value)
-    return -1
+touchcounter = 0
+print("variables initialisation done")
 
 
 class MainScreen(Screen):
     dx = 0
     dy = 0
-    package = 0
     ompx = 0
     ompy = 0
     nmpx = 0
     nmpy = 0
+    global touchcounter
     touchcounter = 0
     start = time.time()
-    leftclick = True
+    leftclick = False
     released = True
     end = time.time()
     double = time.time()
-    delta = 0.08
+    delta = 0.1
     delta2 = 0.2
     hold = False
-"gedrückt"
 
     def on_touch_down(self, touch):
-        self.touchcounter += 1
+        global touchcounter
+        touchcounter += 1
         self.start = time.time()
         if self.start - self.double < self.delta2:
             self.hold = True
-
-        if False:  # GPIO.input(input_pin):  # buttonsDown:
+        if GPIO.input(40):
             if super(MainScreen, self).on_touch_down(touch):
                 return True
             if not self.collide_point(*touch.pos):
@@ -57,35 +92,57 @@ class MainScreen(Screen):
 
     def on_touch_move(self, touch):
         self.end = time.time()
-        if False == False and self.end - self.start > self.delta2:  # erstes False muss durch GPIO.input(input_pin)
-            # ersetzt werden
+        if GPIO.input(40) == False and self.end - self.start > self.delta2:
             touch_input = touch.pos
-            # no 3D-touch
             self.calculate_dx_dy(touch_input[0], touch_input[1])
-            self.calculate_package()
             if self.hold:
-                self.send(5)
-            else:
+                # linksklick gedrückt halten
+                self.send("c3")
                 self.send(0)
+            else:
+                self.send(0) # Mausbewegung abgreifen
+	elif GPIO.input(40):
+		if super(MainScreen, self).on_touch_down(touch):
+			return True
+		if not self.collide_point(*touch.pos):
+			return False
 
     def on_touch_up(self, touch):
+        global touchcounter
         self.end = time.time()
-        if self.touchcounter > 1:
+        if touchcounter > 1:
             self.leftclick = False
-        if self.end - self.start < self.delta and self.touchcounter == 2:
-            self.send(4)
+        if self.end - self.start < self.delta and touchcounter == 2:
+            self.send("c2")
+		# normaler rechtsklick
         if self.leftclick and self.end - self.start < self.delta:
-            self.send(3)
-        self.touchcounter -= 1
-        if self.touchcounter == 0:
+            self.send("c1")
+		# normaler linksklick
+        touchcounter -= 1
+        if touchcounter == 0:
             self.leftclick = True
         self.double = time.time()
         self.hold = False
-        self.send(6)
+        if GPIO.input(40):  # GPIO.input(input_pin):  # buttonsDown:
+           if super(MainScreen, self).on_touch_down(touch):
+               return True
+           if not self.collide_point(*touch.pos):
+               return False
+        write_release()
+	# sichergehen, dass alle Tasten losgelassen werden
+	pass
 
-    def send(self, code):
-        self.switch(code)
-        writeNumber(self.package)
+    def send(self, value):
+        global touchcounter
+        if value == 0:
+            write_Movement(self.dx, self.dy)
+		# Curserbewegung weitergeben
+        else:
+            write_Shortcut(value)
+        #self.switch(code)
+        #writeNumber(100)
+	#print("x: "+str(self.dx)+"  y: "+str(self.dy)+" tc: "+str(touchcounter))
+	#print(self.dy)
 
     def calculate_dx_dy(self, inx, iny):
         self.dx, self.dy = 0, 0
@@ -103,56 +160,17 @@ class MainScreen(Screen):
         self.dx = int(self.dx)
         self.dy = int(self.dy)
 
-    def calculate_package(self):
-        # calculate number for x from movement
-        if self.dx == 0:
-            mx = 0
-        elif self.dx < 0:
-            if (self.dx * -1) < 7:
-                mx = 6
-            elif (self.dx * -1) < 14:
-                mx = 7
-            elif (self.dx * -1) < 21:
-                mx = 8
-            else:
-                mx = 9
-        else:
-            if self.dx < 7:
-                mx = 1
-            elif self.dx < 14:
-                mx = 2
-            elif self.dx < 21:
-                mx = 3
-            else:
-                mx = 4
-        # calculate number for y from movement
-        if self.dy == 0:
-            my = 0
-        elif self.dy < 0:
-            if (self.dy * -1) < 7:
-                my = 6
-            elif (self.dy * -1) < 14:
-                my = 7
-            elif (self.dy * -1) < 21:
-                my = 8
-            else:
-                my = 9
-        else:
-            if self.dy < 7:
-                my = 1
-            elif self.dy < 14:
-                my = 2
-            elif self.dy < 21:
-                my = 3
-            else:
-                my = 4
-        # calculate whole number and
-        # save the glorious number that is going to be the package that is send to the receiver
-        self.package = mx * 10 + my
+class Numpad(Screen):
+    def send(self, value):
+        write_Shortcut(value)
+        print("sent " + str(value))
 
 
 class Calculator(Screen):
     text = ObjectProperty("0")
+
+    def send(self, value):
+        write_Shortcut(value)
 
     def changeoperator(self, noperator):
         global operator
@@ -207,14 +225,15 @@ class Calculator(Screen):
 
 
 class ScreenManagement(ScreenManager):
-    pass
+    def reset(self):
+        global touchcounter
+        touchcounter = 0
 
 
 presentation = Builder.load_file("main.kv")
 
 
 class MainApp(App):
-
     def build(self):
         return presentation
 

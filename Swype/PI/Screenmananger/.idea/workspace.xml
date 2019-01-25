@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8922581e-b4e0-453f-8130-b68b5c424124" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
-    </list>
+    <list default="true" id="8922581e-b4e0-453f-8130-b68b5c424124" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="write.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="write.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../write.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -25,6 +20,13 @@
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZXsensorController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ZXsensorController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6" />
           </provider>
         </entry>
       </file>
@@ -91,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1358" />
     <option name="width" value="1390" />
     <option name="height" value="1756" />
@@ -198,7 +200,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945135" />
@@ -406,6 +408,11 @@
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ZXsensorController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6" />
       </provider>
     </entry>
   </component>
