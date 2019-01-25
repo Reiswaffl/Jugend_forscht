@@ -25,6 +25,7 @@ class MainScreen(Screen):
         }
         return switcher.get(argument, "Fail")
 
+
 class Calculator(Screen):
     text = ObjectProperty("0")
 

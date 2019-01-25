@@ -1,3 +1,4 @@
+# coding=utf-8
 import time
 import os
 os.environ['KIVY_GL_BACKEND'] = 'gl'
@@ -40,6 +41,7 @@ class MainScreen(Screen):
     delta = 0.08
     delta2 = 0.2
     hold = False
+"gedrückt"
 
     def on_touch_down(self, touch):
         self.touchcounter += 1
