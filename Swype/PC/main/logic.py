@@ -28,6 +28,11 @@ def handleInput():
         command = reader.getCommand(id)
         shortcut = reader.getShortcut(id)
         mouseControl.handleShortcut(command,shortcut)
+    if 'n' in incoming_data:
+        key = incoming_data.replace('n', '')
+        key = key.replace("\n", '').replace('\r','')
+        print("-"+key+"-")
+        mouseControl.numPad(key)
 
 def writeShortcut(id,command,shortcut):
     reader.setCommand(id,command)

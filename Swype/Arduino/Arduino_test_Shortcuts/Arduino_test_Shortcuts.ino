@@ -25,23 +25,23 @@ void loop()
 {
    if(digitalRead(black) == LOW)// Button pressed
    {
-      Serial.println("100,100");
+      Serial.println("n1");
       delay(90);
    }
    if(digitalRead(yellow) == LOW){
-      Serial.println("-100,-100");
-      delay(90);
+      Serial.println("n+");
+      delay(150);
    }
    if(digitalRead(white) == LOW){
-      Serial.println("!0");
-      delay(90);
+      Serial.println("n3");
+      delay(150);
    }
    if(digitalRead(red) == LOW){
-      Serial.println("!1");
-      delay(90);
+      Serial.println("n=");
+      delay(150);
    }
    if(digitalRead(blue) == LOW){
-      Serial.println("!2");
-      delay(90);
+      Serial.println("n4");
+      delay(150);
    }
 }

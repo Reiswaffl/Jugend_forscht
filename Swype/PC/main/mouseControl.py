@@ -41,3 +41,10 @@ def runProgramm(path):
         subprocess.Popen([path])
     except:
         pass
+
+def numPad(key):
+    try:
+        pyautogui.keyDown(key)
+        pyautogui.keyUp(key)
+    except:
+        pass
