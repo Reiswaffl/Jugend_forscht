@@ -52,7 +52,10 @@ class userInterface(tkr.Tk):
         self.cmd[7].set(self.COMMAND[0])
     def select(self):
         for i in range(8):
-            logic.writeShortcut(str(i), self.cmd[i].get(), self.shortcut[i].get())
+            if self.cmd[i].get() == "scroll":
+                logic.writeShortcut(str(i), self.cmd[i].get(), "i" + self.shortcut[i].get())
+            else:
+                logic.writeShortcut(str(i), self.cmd[i].get(), self.shortcut[i].get())
 
 
     def start(self):
@@ -128,5 +131,8 @@ class userInterface(tkr.Tk):
 interface = userInterface()
 interface.buildInterface()
 interface.mainloop()
-global p
-p.terminate()
+try:
+    global p
+    p.terminate()
+except:
+    pass

@@ -20,10 +20,9 @@ def handleInput():
         mouseControl.handleMouse(x,y,mouseSpeed) # 0.4 as default now, maybe change later
     if '!' in incoming_data:
         # shortcut
-        id = incoming_data.replace('!','')
+        id = incoming_data.replace('m','')
         id = id.replace(' ','')
-        iid = int(id)
-        id = str(iid)
+        id = id.replace('\n','').replace('\r','')
         print('-'+id+'-')
         command = reader.getCommand(id)
         shortcut = reader.getShortcut(id)
