@@ -48,3 +48,22 @@ def numPad(key):
         pyautogui.keyUp(key)
     except:
         pass
+
+def leftDown():
+    try:
+        pyautogui.mouseDown()
+    except:
+        pass
+
+def rightDown():
+    try:
+        pyautogui.mouseDown(button='right')
+    except:
+        pass
+
+def releaseAll():
+    try:
+        pyautogui.mouseUp(button='right')
+        pyautogui.mouseUp()
+    except:
+        pass

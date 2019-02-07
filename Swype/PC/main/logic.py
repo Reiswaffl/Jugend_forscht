@@ -23,16 +23,25 @@ def handleInput():
         id = incoming_data.replace('m','')
         id = id.replace(' ','')
         id = id.replace('\n','').replace('\r','')
-        print('-'+id+'-')
+
         command = reader.getCommand(id)
         shortcut = reader.getShortcut(id)
         mouseControl.handleShortcut(command,shortcut)
     if 'n' in incoming_data:
         key = incoming_data.replace('n', '')
         key = key.replace("\n", '').replace('\r','')
-        print("-"+key+"-")
-        mouseControl.numPad(key)
 
+        mouseControl.numPad(key)
+    if 'c1' in incoming_data:
+        mouseControl.leftDown()
+        mouseControl.releaseAll()
+    if 'c2' in incoming_data:
+        mouseControl.rightDown()
+        mouseControl.releaseAll()
+    if 'c3' in incoming_data:
+        mouseControl.leftDown()
+    if 'r' in incoming_data:
+        mouseControl.releaseAll()
 def writeShortcut(id,command,shortcut):
     reader.setCommand(id,command)
     reader.setShortcut(id,shortcut)
