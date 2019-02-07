@@ -32,15 +32,15 @@ def handleInput():
         key = key.replace("\n", '').replace('\r','')
 
         mouseControl.numPad(key)
-    if 'c1' in incoming_data:
+    if 'c1' in incoming_data:   #leftclick
         mouseControl.leftDown()
         mouseControl.releaseAll()
-    if 'c2' in incoming_data:
+    if 'c2' in incoming_data:   #rightclick
         mouseControl.rightDown()
         mouseControl.releaseAll()
-    if 'c3' in incoming_data:
+    if 'c3' in incoming_data:   #left mouse down
         mouseControl.leftDown()
-    if 'r' in incoming_data:
+    if 'r' in incoming_data:    #release all mousebuttons
         mouseControl.releaseAll()
 def writeShortcut(id,command,shortcut):
     reader.setCommand(id,command)
