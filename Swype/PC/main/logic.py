@@ -33,8 +33,7 @@ def handleInput():
 
         mouseControl.numPad(key)
     if 'c1' in incoming_data:   #leftclick
-        mouseControl.leftDown()
-        mouseControl.releaseAll()
+        mouseControl.click()
     if 'c2' in incoming_data:   #rightclick
         mouseControl.rightDown()
         mouseControl.releaseAll()
