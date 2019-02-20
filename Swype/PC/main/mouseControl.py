@@ -12,7 +12,7 @@ def handleShortcut(command, shortcut):
 def handleMouse(xMovement, yMovement, speed):
     try:
         x, y = pyautogui.position()
-        pyautogui.moveTo(x + int(xMovement), y + int(yMovement))
+        pyautogui.moveTo(x + int(xMovement), y + int(yMovement), 0.1)
     except:
         pass
 
