@@ -1,6 +1,7 @@
 import Tkinter as tkr
 import logic
 import subprocess
+import sys,os
 
 global p
 class userInterface(tkr.Tk):

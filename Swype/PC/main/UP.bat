@@ -10,6 +10,6 @@ cscript /e:jscript "%~f0"
 :: JScript portion */
 
 var shl = new ActiveXObject("WScript.Shell");
-for (var i=0; i<5; i++) {
+for (var i=0; i<1; i++) {
     shl.SendKeys(String.fromCharCode(0xAF));
 }
