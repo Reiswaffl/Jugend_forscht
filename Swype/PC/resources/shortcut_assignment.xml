@@ -1,12 +1,12 @@
 <root>
-    <COM com="COM10" />
+    <COM com="COM8" />
     <saves>
         <shortcut command="hotkey" id="0">ctrl+c</shortcut>
-        <shortcut command="hotkey" id="1">ctrl+v</shortcut>
+        <shortcut command="program" id="1">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
         <shortcut command="program" id="2">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
         <shortcut command="program" id="3">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
-        <shortcut command="scroll" id="4">i100</shortcut>
-        <shortcut command="hotkey" id="5">ctrl+v</shortcut>
+        <shortcut command="scroll" id="4">ii100</shortcut>
+        <shortcut command="scroll" id="5">ii100</shortcut>
         <shortcut command="hotkey" id="6">alt+f4</shortcut>
         <shortcut command="program" id="7">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
     </saves>

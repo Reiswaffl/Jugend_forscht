@@ -43,11 +43,11 @@ void loop()
       delay(40);
    }
    if(digitalRead(red) == LOW){
-      Serial.println("n=");
+      Serial.println("s+");
       delay(150);
    }
    if(digitalRead(blue) == LOW){
-      Serial.println("n4");
+      Serial.println("s-");
       delay(150);
    }
 }

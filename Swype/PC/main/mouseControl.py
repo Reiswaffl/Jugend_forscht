@@ -71,4 +71,13 @@ def releaseAll():
         pyautogui.mouseUp(button='right')
         pyautogui.mouseUp(button='left')
     except:
-        pass
+        pass#
+
+def volume(value):
+     try:
+         if value == "s+":
+            subprocess.Popen("UP.bat")
+         if value == "s-":
+            subprocess.Popen("DOWN.bat")
+     except:
+         pass
