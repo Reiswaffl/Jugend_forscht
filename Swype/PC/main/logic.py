@@ -14,7 +14,7 @@ def start(com):
 
 def handleInput():
     incoming_data = serial.getIncomingData()
-    #print(incoming_data)
+    print(incoming_data)
     if ',' in incoming_data:
         # mouse movement
         movement = incoming_data.replace('\n', '')
@@ -39,9 +39,12 @@ def handleInput():
 
     if 'c1' in incoming_data:   #leftclick
         mouseControl.click()
+        mouseControl.releaseAll()
+        print("clicked")
     if 'c2' in incoming_data:   #rightclick
         mouseControl.rightDown()
-        mouseControl.releaseAll()
+        #mouseControl.releaseAll()
+        print("rightclick")
     if 'c3' in incoming_data:   #left mouse down
         mouseControl.leftDown()
     if 'r' in incoming_data:    #release all mousebuttons

@@ -63,27 +63,40 @@ def numPad(key):
 
 def click():
     try:
-        pyautogui.click()
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
+        #pyautogui.mouseDown(button='left')
+        #pyautogui.mouseDown(button='left')
     except:
+        print("click failed")
         pass
+    #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
+    #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
 
 
 def leftDown():
     try:
-        pyautogui.mouseDown(button='left')
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
+        #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP)
+        #pyautogui.mouseDown(button='left')
     except:
         pass
 
 
 def rightDown():
     try:
-        pyautogui.mouseDown(button='right')
+        win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
+        win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
+        #pyautogui.mouseDown(button='right')
+        #pyautogui.mouseUp(button='right')
     except:
         pass
 
 
 def releaseAll():
     try:
+        win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
         pyautogui.mouseUp(button='right')
         pyautogui.mouseUp(button='left')
     except:
