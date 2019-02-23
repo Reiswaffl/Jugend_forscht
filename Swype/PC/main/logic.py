@@ -13,10 +13,13 @@ def start(com):
 
 
 def handleInput():
-    incoming_data =  serial.getIncomingData()
+    incoming_data = serial.getIncomingData()
+    #print(incoming_data)
     if ',' in incoming_data:
         # mouse movement
-        x,y = incoming_data.split(',')
+        movement = incoming_data.replace('\n', '')
+        x,y = movement.split(',')
+        #incoming_data.replace('\n', '')
         mouseControl.handleMouse(x,y,mouseSpeed) # 0.4 as default now, maybe change later
     if '!' in incoming_data:
         # shortcut

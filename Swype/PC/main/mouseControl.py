@@ -1,5 +1,8 @@
 import pyautogui
 import subprocess
+import win32con
+import win32api
+
 
 def handleShortcut(command, shortcut):
     if command == 'hotkey':
@@ -9,14 +12,19 @@ def handleShortcut(command, shortcut):
     if command == 'program':
         runProgramm(shortcut)
 
+
 def handleMouse(xMovement, yMovement, speed):
     try:
-        x, y = pyautogui.position()
-        pyautogui.moveTo(x + int(xMovement), y + int(yMovement), 0.1)
+        # x, y = pyautogui.position()
+        # pyautogui.moveTo(x + int(xMovement), y + int(yMovement), 0)
+        # pyautogui.moveRel(int(xMovement), int(yMovement), 0.01)
+        win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, int(xMovement), int(yMovement))
     except:
-        pass
+        print("mouse movement failed")
+
 
 def hotkey(shortcut):
+    print(shortcut)
     try:
         sh = shortcut.split('+')
         print(sh)
@@ -29,6 +37,7 @@ def hotkey(shortcut):
     except:
         pass
 
+
 def scroll(shortcut):
     try:
         i = shortcut.replace('i', '')
@@ -36,11 +45,13 @@ def scroll(shortcut):
     except:
         pass
 
+
 def runProgramm(path):
     try:
         subprocess.Popen([path])
     except:
         pass
+
 
 def numPad(key):
     try:
@@ -49,16 +60,20 @@ def numPad(key):
     except:
         pass
 
+
 def click():
     try:
         pyautogui.click()
     except:
         pass
+
+
 def leftDown():
     try:
         pyautogui.mouseDown(button='left')
     except:
         pass
+
 
 def rightDown():
     try:
@@ -66,18 +81,20 @@ def rightDown():
     except:
         pass
 
+
 def releaseAll():
     try:
         pyautogui.mouseUp(button='right')
         pyautogui.mouseUp(button='left')
     except:
-        pass#
+        pass  #
+
 
 def volume(value):
-     try:
-         if value == "s+":
+    try:
+        if value == "s+":
             subprocess.Popen("UP.bat")
-         if value == "s-":
+        if value == "s-":
             subprocess.Popen("DOWN.bat")
-     except:
-         pass
+    except:
+        pass
