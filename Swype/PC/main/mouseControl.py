@@ -1,5 +1,4 @@
 import time
-
 import pyautogui
 import subprocess
 import win32con
@@ -11,7 +10,6 @@ lasttime = time.time()
 
 
 def handleShortcut(command, shortcut):
-    #print(command, shortcut)
     if command == 'hotkey':
         hotkey(shortcut)
     if command == 'scroll':
@@ -22,9 +20,6 @@ def handleShortcut(command, shortcut):
 
 def handleMouse(xMovement, yMovement, speed):
     try:
-        # x, y = pyautogui.position()
-        # pyautogui.moveTo(x + int(xMovement), y + int(yMovement), 0)
-        # pyautogui.moveRel(int(xMovement), int(yMovement), 0.01)
         win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, int(int(xMovement)*speed), int(int(yMovement)*speed))
     except:
         print("mouse movement failed")
@@ -77,16 +72,9 @@ def click():
         if leftup:
             win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
             leftup = False
-        #if not leftup:
-         #   win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
-          #  leftup = True
-        #pyautogui.mouseDown(button='left')
-        #pyautogui.mouseDown(button='left')
     except:
         print("click failed")
         pass
-    #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-    #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
 
 
 def leftDown():
@@ -95,8 +83,6 @@ def leftDown():
         if leftup:
             win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
             leftup = False
-        #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP)
-        #pyautogui.mouseDown(button='left')
     except:
         pass
 
@@ -107,11 +93,6 @@ def rightDown():
         if rightup:
             win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
             rightup = False
-        #if not rightup:
-         #   win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
-          #  rightup = True
-        #pyautogui.mouseDown(button='right')
-        #pyautogui.mouseUp(button='right')
     except:
         pass
 
@@ -126,10 +107,8 @@ def releaseAll():
         if not leftup:
             win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
             leftup = True
-        #pyautogui.mouseUp(button='right')
-        #pyautogui.mouseUp(button='left')
     except:
-        pass  #
+        pass
 
 
 def volume(value):

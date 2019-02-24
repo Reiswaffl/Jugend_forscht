@@ -1,12 +1,11 @@
 import Tkinter as tkr
 import logic
 import subprocess
-import sys, os
 
 global p
 
 
-class userInterface(tkr.Tk):
+class UserInterface(tkr.Tk):
     serialRunning = False
 
     def __init__(self):
@@ -134,7 +133,7 @@ class userInterface(tkr.Tk):
         pass
 
 
-interface = userInterface()
+interface = UserInterface()
 interface.buildInterface()
 interface.mainloop()
 try:

@@ -1,4 +1,3 @@
-import time
 import data
 import serialPi
 import mouseControl

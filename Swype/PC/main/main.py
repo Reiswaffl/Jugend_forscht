@@ -1,6 +1,5 @@
-import userInterface
+import UserInterface
 
-interface = userInterface.userInterface()
+interface = UserInterface.UserInterface()
 interface.buildInterface()
 interface.mainloop()
-
