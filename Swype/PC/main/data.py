@@ -33,14 +33,13 @@ class Reader:
                 return child.get('command')
         return None
 
-
-    def getShortcut(self,id):
+    def getShortcut(self, id):
         for child in self.getSaves():
             if child.get('id') == id:
                 return child.text
         return None
 
-    def setCommand(self, id,command):
+    def setCommand(self, id, command):
         for child in self.getSaves():
             if child.get('id') == id:
                 child.set('command', command)
@@ -48,7 +47,7 @@ class Reader:
                 return child.get('command')
         return None
 
-    def setShortcut(self,id, shortcut):
+    def setShortcut(self, id, shortcut):
         for child in self.getSaves():
 
             if child.get('id') == id:
@@ -57,7 +56,7 @@ class Reader:
                 return child.text
         return None
 
-    def setCOM(self,com):
+    def setCOM(self, com):
         for child in self.root:
             if child.tag == 'COM':
                 child.set('com', com)
