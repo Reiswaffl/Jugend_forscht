@@ -1,5 +1,5 @@
 <root>
-    <COM com="COM6" />
+    <COM com="COM8" />
     <saves>
         <shortcut command="hotkey" id="0">ctrl+v</shortcut>
         <shortcut command="hotkey" id="1">ctrl+c</shortcut>

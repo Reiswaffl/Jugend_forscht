@@ -24,17 +24,14 @@ void loop()
 {
    if(digitalRead(black) == LOW)// Button pressed
    {
-      Serial.println("c1");
+      Serial.println("!0");
       delay(40);
-      Serial.println("c1");
-      delay(40);
+
    }
    if(digitalRead(yellow) == LOW){
-      Serial.println("c3");
+      Serial.println("!1");
       delay(40);
-      Serial.println("100,100");
-      delay(40);
-      Serial.println("r");
+
    }
    if(digitalRead(white) == LOW){
       Serial.println("c1");

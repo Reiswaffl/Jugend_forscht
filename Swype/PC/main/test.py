@@ -1,22 +1,19 @@
-import pyautogui
-import time
-import win32api
-import win32con
+import sys
+import spotipy
+import spotipy.util as util
 
-time.sleep(1)
-print('go')
+scope = 'user-library-read'
 
-win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
-win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
-time.sleep(1)
+username="reiswaffl123"
+token = util.prompt_for_user_token(username,scope,client_id='678a44df3488479d97bcd9995f4d419d',client_secret='aa5a13cac9b84027a72ce7ad6e36e182',redirect_uri='http://example.com/callback/')
 
-win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
-win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
-time.sleep(1)
 
-#win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-#win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
-#time.sleep(1)
+if token:
+    sp = spotipy.Spotify(auth=token)
+    results = sp.current_user_saved_tracks()
+    for item in results['items']:
+        track = item['track']
+        print track['name'] + ' - ' + track['artists'][0]['name']
 
-#win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-#win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
+else:
+    print "Can't get token for", username
