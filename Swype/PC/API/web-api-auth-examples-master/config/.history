@@ -1,0 +1,17 @@
+npm instal l
+npm install 
+npm install
+cd authorization_code
+node app.js
+curl http://localhost:8888/callback
+curl http://127.0.01:8888/callback
+curl http://127.0.0.1:8888/callback
+curl http://127.0.0.1:8888/callback/
+cd authorization_code 
+node app.js
+node app.js
+cd derver
+cd server
+node server.js
+cd 
+cd authorization_code
