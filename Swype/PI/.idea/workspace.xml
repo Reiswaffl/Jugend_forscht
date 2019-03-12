@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/calculator.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/calculator.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/copy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/cut.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/cut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/paste.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/paste.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/screen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/spot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/spot.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GUI.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/GUI.py">
+      <file leaf-file-name="CoreScript.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/CoreScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="1751">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#55#64#0" expanded="true" />
               </folding>
@@ -35,8 +28,8 @@
       <file leaf-file-name="kivyfile.kv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
-              <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+            <state relative-caret-position="435">
+              <caret line="301" lean-forward="true" selection-start-line="301" selection-end-line="301" />
             </state>
           </provider>
         </entry>
@@ -99,12 +92,6 @@
               <item name="PI" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI" type="462c0819:PsiDirectoryNode" />
               <item name="Screenmanagerv2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI" type="462c0819:PsiDirectoryNode" />
-              <item name="Screenmanagerv2" type="462c0819:PsiDirectoryNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PI" type="b2602c69:ProjectViewProjectNode" />
@@ -223,8 +210,8 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5018587" side_tool="true" visible="true" weight="0.31866667" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49814126" visible="true" weight="0.31866667" />
+      <window_info active="true" anchor="bottom" id="Event Log" sideWeight="0.5018587" side_tool="true" visible="true" weight="0.31866667" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49814126" visible="true" weight="0.31866667" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -234,10 +221,12 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -261,20 +250,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/GUI.py">
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/CoreScript.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#55#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmananger/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="238" selection-start-line="238" selection-end-line="238" />
+          <folding>
+            <element signature="e#15#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmananger/main.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/GUI.py" />
     <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        <state relative-caret-position="435">
+          <caret line="301" lean-forward="true" selection-start-line="301" selection-end-line="301" />
         </state>
       </provider>
     </entry>

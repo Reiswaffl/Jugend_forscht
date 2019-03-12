@@ -13,7 +13,7 @@ ScreenManagement:
     name: "main"
     canvas.before:
         Rectangle:
-            source:"sources/4.png"
+            source:"sources/background/4.png"
             size: self.size
             pos: self.pos
     GridLayout:
@@ -41,7 +41,7 @@ ScreenManagement:
     name: "testscreen2"
     canvas.before:
         Rectangle:
-            source:"sources/10.png"
+            source:"sources/background/11.png"
             size: self.size
             pos: self.pos
     GridLayout:
@@ -92,7 +92,7 @@ ScreenManagement:
     name: "testscreen3"
     canvas.before:
         Rectangle:
-            source:"sources/9.png"
+            source:"sources/background/9.png"
             size: self.size
             pos: self.pos
     GridLayout:
@@ -141,7 +141,10 @@ ScreenManagement:
 
 
 # ________________________ APPS __________________________
+##########################################################
+# ________________________________________________________
 
+# _______ CALCULATOR ________
 <Calculator>:
     name: "Calculator"
 	GridLayout:
@@ -227,6 +230,7 @@ ScreenManagement:
 			source: 'sources/calculator/equals.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.giveresult()
 
+# ________ NUMBPAD ________
 
 <Numpad>:
     name: "Numpad"
@@ -295,3 +299,5 @@ ScreenManagement:
         Image:
             source: 'sources/numpad/point.jpeg'
             on_touch_down: if self.collide_point(*args[1].pos): root.send("n16")
+
+# ________ SPOTIFY ________
