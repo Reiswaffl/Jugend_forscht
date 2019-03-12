@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 import serial
 import os
+
 os.environ['KIVY_GL_BACKEND'] = 'gl'
 import time
 from kivy.app import App
@@ -23,32 +24,37 @@ print("GPIO setup done")
 shortcutTime = time.time()
 time.sleep(1)
 # USBController wird initialisiert
-#ser = serial.Serial(
+# ser = serial.Serial(
 #    port='/dev/ttyAMA0',
 #    baudrate=115200,
 #    parity=serial.PARITY_NONE,
 #    stopbits=serial.STOPBITS_ONE,
 #    bytesize=serial.EIGHTBITS,
 #    timeout=1
-#)
+# )
 print("Serial initialisation done")
+
 
 def write_Shortcut(shortcut):
     global shortcutTime
     if time.time() > shortcutTime + 0.5:
         print(shortcut)
-        if not shortcut=="c3":
+        if not shortcut == "c3":
             shortcutTime = time.time()
-    #ser.write(bin('SH' + shortcutNumber + '\n'))
+    # ser.write(bin('SH' + shortcutNumber + '\n'))
+
 
 def write_Movement(x, y):
     global shortcutTime
     if time.time() - 0.1 > shortcutTime:
         print(x, y)
-    #ser.write(bin(x + ',' + y + '\n'))
+    # ser.write(bin(x + ',' + y + '\n'))
+
+
 def write_release():
     print("release all")
-    #ser.write(bin('SH' + shortcutNumber + '\n'))
+    # ser.write(bin('SH' + shortcutNumber + '\n'))
+
 
 # Variablen werden initialisiert
 touch = False
@@ -100,12 +106,12 @@ class MainScreen(Screen):
                 self.send("c3")
                 self.send(0)
             else:
-                self.send(0) # Mausbewegung abgreifen
-	elif GPIO.input(40):
-		if super(MainScreen, self).on_touch_down(touch):
-			return True
-		if not self.collide_point(*touch.pos):
-			return False
+                self.send(0)  # Mausbewegung abgreifen
+        elif GPIO.input(40):
+            if super(MainScreen, self).on_touch_down(touch):
+                return True
+            if not self.collide_point(*touch.pos):
+                return False
 
     def on_touch_up(self, touch):
         global touchcounter
@@ -114,35 +120,36 @@ class MainScreen(Screen):
             self.leftclick = False
         if self.end - self.start < self.delta and touchcounter == 2:
             self.send("c2")
-		# normaler rechtsklick
+        # normaler rechtsklick
         if self.leftclick and self.end - self.start < self.delta:
             self.send("c1")
-		# normaler linksklick
+        # normaler linksklick
         touchcounter -= 1
         if touchcounter == 0:
             self.leftclick = True
         self.double = time.time()
         self.hold = False
         if GPIO.input(40):  # GPIO.input(input_pin):  # buttonsDown:
-           if super(MainScreen, self).on_touch_down(touch):
-               return True
-           if not self.collide_point(*touch.pos):
-               return False
+            if super(MainScreen, self).on_touch_down(touch):
+                return True
+            if not self.collide_point(*touch.pos):
+                return False
         write_release()
-	# sichergehen, dass alle Tasten losgelassen werden
-	pass
+        # sichergehen, dass alle Tasten losgelassen werden
+        pass
 
     def send(self, value):
         global touchcounter
         if value == 0:
             write_Movement(self.dx, self.dy)
-		# Curserbewegung weitergeben
+        # Curserbewegung weitergeben
         else:
             write_Shortcut(value)
-        #self.switch(code)
-        #writeNumber(100)
-	#print("x: "+str(self.dx)+"  y: "+str(self.dy)+" tc: "+str(touchcounter))
-	#print(self.dy)
+        # self.switch(code)
+        # writeNumber(100)
+
+    # print("x: "+str(self.dx)+"  y: "+str(self.dy)+" tc: "+str(touchcounter))
+    # print(self.dy)
 
     def calculate_dx_dy(self, inx, iny):
         self.dx, self.dy = 0, 0
@@ -159,6 +166,7 @@ class MainScreen(Screen):
 
         self.dx = int(self.dx)
         self.dy = int(self.dy)
+
 
 class Numpad(Screen):
     def send(self, value):
@@ -230,7 +238,7 @@ class ScreenManagement(ScreenManager):
         touchcounter = 0
 
 
-presentation = Builder.load_file("main.kv")
+presentation = Builder.load_file("kivyfile.kv")
 
 
 class MainApp(App):
