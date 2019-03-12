@@ -1,34 +1,143 @@
 #: import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:set home "main"
 
 ScreenManagement:
     transition: FadeTransition()
     MainScreen:
-
+    TestScreen2:
+    TestScreen3:
 
 <MainScreen>:
     id: mainScreen
     name: "main"
+    canvas.before:
+        Rectangle:
+            source:"sources/1.png"
+            size: self.size
+            pos: self.pos
     GridLayout:
-        rows: 1
-        Image:
-            source: 'shortcuts/copy.png'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("m1")
-        Image:
-            source: 'shortcuts/paste.png'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("m2")
-        Image:
-			source: 'shortcuts/numpad.png'
-            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "TestScreen2"
-        Image:
-            source: 'shortcuts/calculator.png'
-            on_touch_down: if self.collide_point(*args[1].pos): print("yess")
+        cols: 1
+        Button:
+            background_color: (1.0, 1.0, 1.0, 1.0)
+            text: "switch screens"
+            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.Switch()
+            #pos: 0, 538
+            size_hint: 1, .1
+        GridLayout:
+            rows: 1
+            #pos: -128, -192
+            Image:
+                #pos: -128, -192
+			    source: 'sources/blank.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.setHome("testscreen3")
+            Image:
+                #pos: -128, -10
+                source: 'sources/blank.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.setHome("testscreen2")
+            Image:
+                source: 'sources/blank.png'
+                on_touch_down: if self.collide_point(*args[1].pos): print("yess")
 
 <TestScreen2>:
-    id: testScreen2
-    name: "tS2"
+    id: testscreen2
+    name: "testscreen2"
+    canvas.before:
+        Rectangle:
+            source:"sources/9.png"
+            size: self.size
+            pos: self.pos
     GridLayout:
-        rows: 3
-        Image:
-            source: 'sources/word.png'
-        Image:
-            source: 'sources/stick.png'
+        cols: 1
+        Button:
+            size_hint: 1, .1
+            text: "switch screens"
+            #font_size: 50
+            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.Switch()
+        GridLayout:
+            rows: 3
+            Image:
+                source: 'sources/word.png'
+            Image:
+                source: 'sources/stick.png'
+            Image:
+                source: 'sources/kal2.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/mail.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/chrome.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/spot.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/numpad.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/calculator.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/copy.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/paste.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/cut.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/screen.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+
+<TestScreen3>:
+    id: testscreen3
+    name: "testscreen3"
+    canvas.before:
+        Rectangle:
+            source:"sources/4.png"
+            size: self.size
+            pos: self.pos
+    GridLayout:
+        cols: 1
+        Button:
+            size_hint: 1, .1
+            text: "switch screens"
+            #font_size: 50
+            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.Switch()
+        GridLayout:
+            rows: 3
+            Image:
+                source: 'sources/word2.png'
+            Image:
+                source: 'sources/stick.png'
+            Image:
+                source: 'sources/kal2.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/mail.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/chrome2.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/spot.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/numpad.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/calculator.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/copy2.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/paste.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/cut.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
+            Image:
+                source: 'sources/screen.png'
+                on_touch_down: if self.collide_point(*args[1].pos): pass
