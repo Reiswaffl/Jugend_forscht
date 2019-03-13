@@ -1,35 +1,5 @@
 import spotipy
 import spotipy.oauth2 as oauth2
-import spotilib
-import win32gui
-
-
-def get_info_windows():
-    windows = []
-
-
-
-    # Newer Spotify versions - create an EnumHandler for EnumWindows and flood the list with Chrome_WidgetWin_0s
-    def find_spotify_uwp(hwnd, windows):
-        text = win32gui.GetWindowText(hwnd)
-        if win32gui.GetClassName(hwnd) == "Chrome_WidgetWin_0" and len(text) > 0:
-            windows.append(text)
-
-    win32gui.EnumWindows(find_spotify_uwp, windows)
-    print('Starting shit')
-    while windows.count != 0:
-        try:
-            text = windows.pop()
-            print(text)
-        except:
-            return "Error", "Nothing playing"
-        try:
-            artist, track = text.split(" - ", 1)
-            print( artist, track )
-        except:
-            print('Error')
-get_info_windows()
-'''
 def show_playlist(playlist):
     results = spotify.user_playlist(
         playlist['owner']['id'], playlist['id'], fields='tracks,next')
@@ -64,7 +34,9 @@ if token:
     spotify = spotipy.Spotify(auth=token)
     playlists = spotify.user_playlists(username)
     check = 1
-
+    resp = spotify.currently_playing(market="DE")
+    content = resp.get('item')
+    print(content)
     while True:
         for playlist in playlists['items']:
             # in rare cases, playlists may not be found, so playlists['next']
@@ -83,4 +55,3 @@ if token:
             break
 else:
     print "Can't get token for", username
-'''

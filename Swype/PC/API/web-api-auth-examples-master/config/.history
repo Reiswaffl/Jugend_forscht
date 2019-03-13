@@ -15,3 +15,15 @@ cd server
 node server.js
 cd 
 cd authorization_code
+cd authorization_code
+node app.js
+node app.js
+node app.js
+cd derver
+cd server
+node server.js
+cd 
+cd authorization_code
+cd authorization_code
+kill
+node app.js
