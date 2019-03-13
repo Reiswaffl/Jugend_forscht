@@ -2,11 +2,12 @@
 
 ScreenManagement:
     transition: FadeTransition()
-    MainScreen:
     TestScreen2:
+    MainScreen:
     TestScreen3:
     Numpad:
     Calculator:
+    Spotify:
 
 <MainScreen>:
     id: mainScreen
@@ -27,13 +28,13 @@ ScreenManagement:
             rows: 1
             Image:
                 #pos: -128, -192
-			    source: 'sources/blank.png'
+			    source: 'sources/icons/blank.png'
                 on_touch_down: if self.collide_point(*args[1].pos): root.setHome("testscreen3")
             Image:
-                source: 'sources/blank.png'
+                source: 'sources/icons/blank.png'
                 on_touch_down: if self.collide_point(*args[1].pos): root.setHome("testscreen2")
             Image:
-                source: 'sources/blank.png'
+                source: 'sources/icons/blank.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Numpad"
 
 <TestScreen2>:
@@ -53,38 +54,38 @@ ScreenManagement:
         GridLayout:
             rows: 3
             Image:
-                source: 'sources/word.png'
+                source: 'sources/icons/word.png'
             Image:
-                source: 'sources/stick.png'
+                source: 'sources/icons/stick.png'
             Image:
-                source: 'sources/kal2.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                source: 'sources/icons/calendar.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opencalendar')
             Image:
-                source: 'sources/mail.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                source: 'sources/icons/mail.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openmail')
             Image:
-                source: 'sources/chrome.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                source: 'sources/icons/chrome.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openchrome')
             Image:
-                source: 'sources/spot.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                source: 'sources/icons/spot.png'
+                on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Spotify"
             Image:
-                source: 'sources/numpad.png'
+                source: 'sources/icons/numpad.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Numpad"
             Image:
-                source: 'sources/calculator.png'
+                source: 'sources/icons/calculator.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Calculator"
             Image:
-                source: 'sources/copy.png'
+                source: 'sources/icons/copy.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/paste.png'
+                source: 'sources/icons/paste.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/cut.png'
+                source: 'sources/icons/cut.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/screen.png'
+                source: 'sources/icons/screen.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
 
 <TestScreen3>:
@@ -104,38 +105,38 @@ ScreenManagement:
         GridLayout:
             rows: 3
             Image:
-                source: 'sources/word2.png'
+                source: 'sources/icons/word.png'
             Image:
-                source: 'sources/stick.png'
+                source: 'sources/icons/stick.png'
             Image:
-                source: 'sources/kal2.png'
+                source: 'sources/icons/calendar.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/mail.png'
+                source: 'sources/icons/mail.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/chrome2.png'
+                source: 'sources/icons/chrome.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/spot.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                source: 'sources/icons/spot.png'
+                on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Spotify"
             Image:
-                source: 'sources/numpad.png'
+                source: 'sources/icons/numpad.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Numpad"
             Image:
-                source: 'sources/calculator.png'
+                source: 'sources/icons/calculator.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Calculator"
             Image:
-                source: 'sources/copy2.png'
+                source: 'sources/icons/copy.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/paste.png'
+                source: 'sources/icons/paste.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/cut.png'
+                source: 'sources/icons/cut.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
             Image:
-                source: 'sources/screen.png'
+                source: 'sources/icons/screen.png'
                 on_touch_down: if self.collide_point(*args[1].pos): pass
 
 
@@ -147,15 +148,13 @@ ScreenManagement:
 # _______ CALCULATOR ________
 <Calculator>:
     name: "Calculator"
+    canvas.before:
+        Rectangle:
+            source: 'sources/calculator/background.png'
+            size: self.size
+            pos: self.pos
 	GridLayout:
 	    cols: 6
-	    canvas.before:
-            Color:
-                rgba: 1, 1, 1, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
-
         Image:
             source: 'sources/calculator/1.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.calculate(1)
@@ -186,12 +185,13 @@ ScreenManagement:
         Label:
             canvas.before:
                 Color:
-                    rgba: 0,0,0,.3
+                    rgba: 1,1,1,.2
                 Rectangle:
                     size: 100,50
                     pos: self.x+96,self.y+50
             size_hint_x: 2
             text: root.text
+            color: 1, 1, 1, 1
         Image:
 		    source: 'sources/calculator/c.png'
 		    on_touch_down: if self.collide_point(*args[1].pos): root.reset()
@@ -231,9 +231,13 @@ ScreenManagement:
 			on_touch_down: if self.collide_point(*args[1].pos): root.giveresult()
 
 # ________ NUMBPAD ________
-
 <Numpad>:
     name: "Numpad"
+    canvas.before:
+        Rectangle:
+            source: 'sources/numpad/background.png'
+            size: self.size
+            pos: self.pos
     GridLayout:
         cols: 5
         Image:
@@ -301,3 +305,86 @@ ScreenManagement:
             on_touch_down: if self.collide_point(*args[1].pos): root.send("n16")
 
 # ________ SPOTIFY ________
+<Spotify>:
+    name: "Spotify"
+    id: Spotify
+    canvas.before:
+        Rectangle:
+            source: 'sources/spotify/background.png'
+            size: self.size
+            pos: self.pos
+    GridLayout:
+        cols: 1
+        GridLayout:
+            rows: 1
+            size_hint_y: 0.5
+            Image:
+                source: 'sources/spotify/logo.png'
+                size_hint_x: 1
+            Image:
+                source: 'sources/spotify/space.png'
+            Label:
+                text: 'Hello Text'
+                font_size: '50sp'
+            Image:
+                source: 'sources/spotify/space.png'
+            Image:
+                source: 'sources/spotify/esc.png'
+                on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.getHome()
+                size_hint_y: 0.8
+        GridLayout:
+            rows: 1
+            Image:
+                source: 'sources/spotify/blank.png'
+                size_hint_x: 0.4
+                allow_stretch: True
+            GridLayout:
+                cols: 1
+                GridLayout:
+                    rows: 1
+                    Image:
+                        source: 'sources/spotify/back.png'
+                    Image:
+                        source: 'sources/spotify/play.png'
+                        id: playButton
+                    Image:
+                        source: 'sources/spotify/fwrd.png'
+                    Image:
+                        source: 'sources/spotify/space.png'
+                GridLayout:
+                    padding: 0
+                    rows: 1
+                    size_hint_y: 0.5
+                    Image:
+                        source: 'sources/spotify/blank.png'
+                        size_hint_x: 0.5
+                    Slider:
+                        cursor_image: 'sources/spotify/pull.png'
+                        cursor_size: '25sp', '25sp'
+                        size_hint_x: 0.7
+                        value: root.getVolume()
+                        range: 0, 100
+                        step: 1
+                        value_track: True
+                        value_track_color: 0.2, 0.5, 0.1, 1.0
+                    Image:
+                        source: 'sources/spotify/space.png'
+        GridLayout:
+            rows: 1
+            size_hint_y: 0.7
+            Image:
+                source: 'sources/spotify/space.png'
+                size_hint_x: 0.7
+            Slider:
+                cursor_image: 'sources/spotify/pull.png'
+                cursor_size: '16sp', '16sp'
+                size_hint_x: 4.5
+                value: root.getValue()
+                value_track: True
+                value_track_color: 0.2, 0.5, 0.1, 1.0
+                value_track_width: '3dp'
+                step: root.getStep()
+                range: root.getRange()
+            Image:
+                source: 'sources/spotify/space.png'
+                size_hint_x: 0.7
