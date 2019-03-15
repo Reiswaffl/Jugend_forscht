@@ -1,7 +1,6 @@
-from kivy.uix.screenmanager import Screen
 from kivy.properties import ObjectProperty
 from Screenmanagerv2.ScreenHandler import gethome
-from Screenmanagerv2.writerScript import write_Shortcut
+from Screenmanagerv2.TouchHandler import *
 
 previousValue = 0
 currentValue = 0
@@ -67,3 +66,12 @@ class Calculator(Screen):
                 self.text = str(previousValue)
             else:
                 self.text = "Error"
+
+    def on_touch_down(self, touch):
+        on_touch_down(self, touch, Screen)
+
+    def on_touch_move(self, touch):
+        on_touch_move(self, touch, Screen)
+
+    def on_touch_up(self, touch):
+        on_touch_up(self, touch, Screen)

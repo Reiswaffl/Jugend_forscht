@@ -13,7 +13,6 @@ from kivy.config import Config
 from Screenmanagerv2.screenclasses.Numpad import *
 from Screenmanagerv2.screenclasses.MainScreen import *
 from Screenmanagerv2.screenclasses.MainScreen2 import *
-from Screenmanagerv2.screenclasses.MainScreen3 import *
 from Screenmanagerv2.screenclasses.Calculator import *
 from Screenmanagerv2.screenclasses.Spotify import *
 
@@ -27,9 +26,7 @@ touchcounter = 0
 
 
 class ScreenManagement(ScreenManager):
-    def reset(self):
-        global touchcounter
-        touchcounter = 0
+    pass
 
 
 presentation = Builder.load_file("kivyfile.kv")

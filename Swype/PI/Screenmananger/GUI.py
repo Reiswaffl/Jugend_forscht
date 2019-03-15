@@ -1,5 +1,5 @@
 # coding=utf-8
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 import serial
 import os
 
@@ -17,8 +17,8 @@ Config.set('graphics', 'height', '600')
 print("Touchpad setup done")
 
 # GPIO setup; Widerstand wird initialisierd, Input festgelegt
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+# GPIO.setmode(GPIO.BOARD)
+# GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 print("GPIO setup done")
 
 shortcutTime = time.time()
@@ -74,7 +74,7 @@ class MainScreen(Screen):
     nmpx = 0
     nmpy = 0
     global touchcounter
-    touchcounter = 0
+    # touchcounter = 0
     start = time.time()
     leftclick = False
     released = True
@@ -90,15 +90,15 @@ class MainScreen(Screen):
         self.start = time.time()
         if self.start - self.double < self.delta2:
             self.hold = True
-        if GPIO.input(40):
+        if True:  # GPIO.input(40):
             if super(MainScreen, self).on_touch_down(touch):
                 return True
             if not self.collide_point(*touch.pos):
                 return False
 
     def on_touch_move(self, touch):
-        self.end = time.time()
-        if GPIO.input(40) == False and self.end - self.start > self.delta2:
+        self.end = time.time()  # GPIO.input(40) == False and
+        if self.end - self.start > self.delta2:
             touch_input = touch.pos
             self.calculate_dx_dy(touch_input[0], touch_input[1])
             if self.hold:
@@ -107,7 +107,7 @@ class MainScreen(Screen):
                 self.send(0)
             else:
                 self.send(0)  # Mausbewegung abgreifen
-        elif GPIO.input(40):
+        elif True:  # GPIO.input(40):
             if super(MainScreen, self).on_touch_down(touch):
                 return True
             if not self.collide_point(*touch.pos):
@@ -129,7 +129,7 @@ class MainScreen(Screen):
             self.leftclick = True
         self.double = time.time()
         self.hold = False
-        if GPIO.input(40):  # GPIO.input(input_pin):  # buttonsDown:
+        if True:  # GPIO.input(40):  # GPIO.input(input_pin):  # buttonsDown:
             if super(MainScreen, self).on_touch_down(touch):
                 return True
             if not self.collide_point(*touch.pos):
@@ -238,7 +238,7 @@ class ScreenManagement(ScreenManager):
         touchcounter = 0
 
 
-presentation = Builder.load_file("kivyfile.kv")
+presentation = Builder.load_file("main.kv")
 
 
 class MainApp(App):

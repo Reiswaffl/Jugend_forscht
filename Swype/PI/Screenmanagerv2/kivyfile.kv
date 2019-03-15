@@ -4,7 +4,6 @@ ScreenManagement:
     transition: FadeTransition()
     TestScreen2:
     MainScreen:
-    TestScreen3:
     Numpad:
     Calculator:
     Spotify:
@@ -14,13 +13,13 @@ ScreenManagement:
     name: "main"
     canvas.before:
         Rectangle:
-            source:"sources/background/4.png"
+            source:"sources/background/11.png"
             size: self.size
             pos: self.pos
     GridLayout:
         cols: 1
         Button:
-            background_color: (1.0, 1.0, 1.0, 1.0)
+            background_color: (1.0, 1.0, 1.0, 0.5)
             text: "switch"
             on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.Switch()
             size_hint: 1, .1
@@ -28,14 +27,11 @@ ScreenManagement:
             rows: 1
             Image:
                 #pos: -128, -192
-			    source: 'sources/icons/blank.png'
-                on_touch_down: if self.collide_point(*args[1].pos): root.setHome("testscreen3")
+			    source: 'sources/icons/tw.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opentw')
             Image:
-                source: 'sources/icons/blank.png'
-                on_touch_down: if self.collide_point(*args[1].pos): root.setHome("testscreen2")
-            Image:
-                source: 'sources/icons/blank.png'
-                on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Numpad"
+                source: 'sources/icons/yt.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openyt')
 
 <TestScreen2>:
     id: testscreen2
@@ -48,6 +44,7 @@ ScreenManagement:
     GridLayout:
         cols: 1
         Button:
+            background_color: 1.0, 1.0, 1.0, 0.5
             size_hint: 1, .1
             text: "switch"
             on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.Switch()
@@ -55,10 +52,12 @@ ScreenManagement:
             rows: 3
             Image:
                 source: 'sources/icons/word.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openword')
             Image:
                 source: 'sources/icons/stick.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opensticky')
             Image:
-                source: 'sources/icons/calendar.png'
+                source: 'sources/icons/calendar3.png'
                 on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opencalendar')
             Image:
                 source: 'sources/icons/mail.png'
@@ -77,16 +76,16 @@ ScreenManagement:
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Calculator"
             Image:
                 source: 'sources/icons/copy.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('copy')
             Image:
                 source: 'sources/icons/paste.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('paste')
             Image:
                 source: 'sources/icons/cut.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('cut')
             Image:
                 source: 'sources/icons/screen.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('takescreen')
 
 <TestScreen3>:
     id: testscreen3
@@ -99,6 +98,7 @@ ScreenManagement:
     GridLayout:
         cols: 1
         Button:
+            background_color: 1.0, 1.0, 1.0, 0.5
             size_hint: 1, .1
             text: "switch"
             on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.Switch()
@@ -106,17 +106,19 @@ ScreenManagement:
             rows: 3
             Image:
                 source: 'sources/icons/word.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openword')
             Image:
                 source: 'sources/icons/stick.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opensticky')
             Image:
-                source: 'sources/icons/calendar.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                source: 'sources/icons/calendar3.png'
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opencalendar')
             Image:
                 source: 'sources/icons/mail.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openmail')
             Image:
                 source: 'sources/icons/chrome.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openchrome')
             Image:
                 source: 'sources/icons/spot.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Spotify"
@@ -128,16 +130,16 @@ ScreenManagement:
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Calculator"
             Image:
                 source: 'sources/icons/copy.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('copy')
             Image:
                 source: 'sources/icons/paste.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('paste')
             Image:
                 source: 'sources/icons/cut.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('cut')
             Image:
                 source: 'sources/icons/screen.png'
-                on_touch_down: if self.collide_point(*args[1].pos): pass
+                on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('takescreen')
 
 
 
@@ -205,10 +207,10 @@ ScreenManagement:
             source: 'sources/calculator/9.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.calculate(9)
 		Image:
-			source: 'sources/calculator/times.png'
+			source: 'sources/calculator/multiplyb.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("*")
 		Image:
-			source: 'sources/calculator/divide.png'
+			source: 'sources/calculator/divideb.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("/")
 	    Image:
             source: 'sources/calculator/space.png'
@@ -221,13 +223,13 @@ ScreenManagement:
             source: 'sources/calculator/comma.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.calculate(14)
         Image:
-			source: 'sources/calculator/plus.png'
+			source: 'sources/calculator/plusb.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("+")
         Image:
-			source: 'sources/calculator/minus.png'
+			source: 'sources/calculator/minusb.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("-")
         Image:
-			source: 'sources/calculator/equals.png'
+			source: 'sources/calculator/equalsb.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.giveresult()
 
 # ________ NUMBPAD ________
@@ -241,68 +243,70 @@ ScreenManagement:
     GridLayout:
         cols: 5
         Image:
-            source: 'sources/numpad/esc.jpeg'
+            source: 'sources/numpad/space.png'
             on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.getHome()
         Image:
-            source: 'sources/numpad/slash.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n1")
+            source: 'sources/numpad/slash.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('slash')
         Image:
-            source: 'sources/numpad/star.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n2")
+            source: 'sources/numpad/star.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('star')
         Image:
-            source: 'sources/numpad/minus.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n3")
+            source: 'sources/numpad/minus.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('minus')
         Image:
-            source: 'sources/numpad/space.png'
+            source: 'sources/numpad/esc.png'
+            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.getHome()
         Image:
-            source: 'sources/numpad/7.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n4")
+            source: 'sources/numpad/7.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('7')
         Image:
-            source: 'sources/numpad/8.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n5")
+            source: 'sources/numpad/8.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('8')
         Image:
-            source: 'sources/numpad/9.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n6")
+            source: 'sources/numpad/9.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('9')
         Image:
-            source: 'sources/numpad/plus.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n7")
-        Image:
-            source: 'sources/numpad/space.png'
-        Image:
-            source: 'sources/numpad/4.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n8")
-        Image:
-            source: 'sources/numpad/5.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n9")
-        Image:
-            source: 'sources/numpad/6.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n10")
+            source: 'sources/numpad/plus.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('plus')
         Image:
             source: 'sources/numpad/space.png'
         Image:
+            source: 'sources/numpad/4.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('4')
+        Image:
+            source: 'sources/numpad/5.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('5')
+        Image:
+            source: 'sources/numpad/6.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('6')
+        Image:
+            source: 'sources/numpad/enter_up.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('enter')
+        Image:
             source: 'sources/numpad/space.png'
         Image:
-            source: 'sources/numpad/1.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n11")
+            source: 'sources/numpad/1.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('1')
         Image:
-            source: 'sources/numpad/2.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n12")
+            source: 'sources/numpad/2.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('2')
         Image:
-            source: 'sources/numpad/3.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n13")
+            source: 'sources/numpad/3.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('3')
         Image:
-            source: 'sources/numpad/enter.png'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n14")
+            source: 'sources/numpad/enter_low.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('enter')
         Image:
             source: 'sources/numpad/space.png'
         Image:
             source: 'sources/numpad/0.png'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n15")
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('0')
         Image:
             source: 'sources/numpad/space.png'
         Image:
-            source: 'sources/numpad/point.jpeg'
-            on_touch_down: if self.collide_point(*args[1].pos): root.send("n16")
+            source: 'sources/numpad/point.png'
+            on_touch_down: if self.collide_point(*args[1].pos): root.send('point')
 
 # ________ SPOTIFY ________
 <Spotify>:
@@ -324,7 +328,7 @@ ScreenManagement:
             Image:
                 source: 'sources/spotify/space.png'
             Label:
-                text: 'Hello Text'
+                text: root.getTitle()
                 font_size: '50sp'
             Image:
                 source: 'sources/spotify/space.png'
@@ -356,7 +360,7 @@ ScreenManagement:
                     rows: 1
                     size_hint_y: 0.5
                     Image:
-                        source: 'sources/spotify/blank.png'
+                        source: 'sources/spotify/volume.png'
                         size_hint_x: 0.5
                     Slider:
                         cursor_image: 'sources/spotify/pull.png'

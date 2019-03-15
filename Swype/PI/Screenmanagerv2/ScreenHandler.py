@@ -1,5 +1,5 @@
 # coding=utf-8
-home = "main"
+home = "testscreen2"
 
 
 def switch():
@@ -8,9 +8,6 @@ def switch():
         home = 'testscreen2'
         return home
     elif home == 'testscreen2':
-        home = 'testscreen3'
-        return home
-    elif home == 'testscreen3':
         home = 'main'
         return home
     else:

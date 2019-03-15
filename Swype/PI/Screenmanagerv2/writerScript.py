@@ -19,6 +19,13 @@ def write_Movement(x, y):
     # ser.write(bin(x + ',' + y + '\n'))
 
 
+def write_write(x):
+    global shortcutTime
+    if time.time() - 0.1 > shortcutTime:
+        print(x)
+        # ser.write(bin('W' + x + '\n'))
+
+
 def write_release():
     print("release all")
     # ser.write(bin('SH' + shortcutNumber + '\n'))
