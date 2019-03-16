@@ -15,6 +15,7 @@ from Screenmanagerv2.screenclasses.MainScreen import *
 from Screenmanagerv2.screenclasses.MainScreen2 import *
 from Screenmanagerv2.screenclasses.Calculator import *
 from Screenmanagerv2.screenclasses.Spotify import *
+from Screenmanagerv2.screenclasses.Word import *
 
 
 # Touchpad wird initialisiert
