@@ -16,6 +16,7 @@ from Screenmanagerv2.screenclasses.MainScreen2 import *
 from Screenmanagerv2.screenclasses.Calculator import *
 from Screenmanagerv2.screenclasses.Spotify import *
 from Screenmanagerv2.screenclasses.Word import *
+from Screenmanagerv2.SensorThread import *
 
 
 # Touchpad wird initialisiert
@@ -31,6 +32,8 @@ class ScreenManagement(ScreenManager):
 
 
 presentation = Builder.load_file("kivyfile.kv")
+
+sensorThread.start()
 
 
 class MainApp(App):

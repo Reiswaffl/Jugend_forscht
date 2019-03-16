@@ -10,7 +10,7 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.config import Config
 from kivy.properties import ObjectProperty
-
+print('hoiiiiiiii')
 # Touchpad wird initialisiert
 Config.set('graphics', 'width', '1024')
 Config.set('graphics', 'height', '600')

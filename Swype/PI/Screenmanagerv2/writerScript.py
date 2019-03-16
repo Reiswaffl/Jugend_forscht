@@ -30,3 +30,7 @@ def write_release():
     print("release all")
     # ser.write(bin('SH' + shortcutNumber + '\n'))
 
+
+def write_soundchange(operator):
+    print(operator)
+    # ser.write(bin('S' + operator + '\n'))

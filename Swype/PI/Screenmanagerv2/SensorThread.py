@@ -1,5 +1,5 @@
 import threading
-import time
+from Screenmanagerv2.ZXsensorController import *
 
 
 class Sensor(threading.Thread):
@@ -20,4 +20,6 @@ class Sensor(threading.Thread):
             self.sensor.handleDataStraight()
             time.sleep(0.03)
 
+
+sensor = SensorController()
 sensorThread = Sensor(sensor)
