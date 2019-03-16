@@ -70,3 +70,9 @@ class Logic:
 
     def getShortCut(self, id):
         return reader.getCommand(id), reader.getShortcut(id)
+
+    def sendTime(self,time):
+        serial.write(time)
+
+    def sendAll(self,song,artist,time):
+        serial.write(song + ',' + artist + ',' + time)

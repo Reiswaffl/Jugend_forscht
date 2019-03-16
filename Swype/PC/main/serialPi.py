@@ -25,3 +25,6 @@ class Ser:
             return str(self.Pi_Serial.readline())
         except:
             return '-'
+
+    def write(self,data):
+        self.Pi_Serial.write(data)

@@ -1,57 +1,55 @@
-import spotipy
-import spotipy.oauth2 as oauth2
-def show_playlist(playlist):
-    results = spotify.user_playlist(
-        playlist['owner']['id'], playlist['id'], fields='tracks,next')
+import requests
+from requests_oauthlib import OAuth2Session
+import json
+import time
+result = None
+data = None
+authorization_response = None
+client_id = "678a44df3488479d97bcd9995f4d419d" # see in Swypad Dashboard
+client_secret = "aa5a13cac9b84027a72ce7ad6e36e182" # see in Swypad Dashboard
+redirect_uri = "https://lvh.me/" # directs to 127.0.0.1
 
-    tracks = results['tracks']
-    show_tracks(tracks)
+scope = [ 'user-read-email', 'user-read-birthdate', 'user-read-playback-state', 'user-modify-playback-state', 'user-read-currently-playing', 'app-remote-control']
 
+oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
 
-def show_tracks(tracks):
-    n = 1
-    while True:
-        for item in tracks['items']:
-            track = item['track']
-            track_title = str(n) + '. '
-            track_title += track['name'] + ' - ' + track['artists'][0]['name']
-            print(track_title)
-            n += 1
-        # 1 page = 50 results
-        # check if there are more pages
-        if tracks['next']:
-            tracks = spotify.next(tracks)
-        else:
-            break
-credentials = oauth2.SpotifyClientCredentials(
-        client_id="678a44df3488479d97bcd9995f4d419d",
-        client_secret="aa5a13cac9b84027a72ce7ad6e36e182")
+authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345)\
 
-token = credentials.get_access_token()
-print(token)
-username = 'reiswaffl123'
-if token:
-    spotify = spotipy.Spotify(auth=token)
-    playlists = spotify.user_playlists(username)
-    check = 1
-    resp = spotify.currently_playing(market="DE")
-    content = resp.get('item')
-    print(content)
-    while True:
-        for playlist in playlists['items']:
-            # in rare cases, playlists may not be found, so playlists['next']
-            # is None. Skip these.
-            if playlist['name'] is not None:
-                print('')
-                print('playlist:')
-                playlist_title = playlist['name'] + ' - ' + str(playlist['tracks']['total'])
-                playlist_title += ' tracks'
-                print(playlist_title)
-                show_playlist(playlist)
-                check += 1
-        if playlists['next']:
-            playlists = spotify.next(playlists)
-        else:
-            break
-else:
-    print "Can't get token for", username
+#just needed once (at the start of the program)
+def getToken():
+    print("Go to: " + authorization_url)
+    global  authorization_response
+    authorization_response = raw_input('Enter the full callback URL: ')
+
+    oauth.fetch_token(
+        'https://accounts.spotify.com/api/token',
+        authorization_response=authorization_response,
+        client_secret=client_secret)
+
+def getJson():
+    global data
+    result = oauth.get('https://api.spotify.com/v1/me/player') #returns informations
+    data = json.loads(result.text) #convert to json
+
+def getInfo():
+    if data != None:
+        try:
+            items  = data["item"]
+            songName = items["name"]
+            artist = items["artists"][0]["name"]
+            progress = str(data["progress_ms"] / 1000)
+            print("Song: " + songName + " Artist: " + str(artist) + " Progress: " + progress)
+            return songName,artist,progress
+        except:
+            oauth.fetch_token(
+                'https://accounts.spotify.com/api/token',
+                authorization_response=authorization_response,
+                client_secret=client_secret)
+            return None,None,None
+
+getToken()
+getJson()
+while 1:
+    getJson()
+    getInfo()
+    time.sleep(2)
