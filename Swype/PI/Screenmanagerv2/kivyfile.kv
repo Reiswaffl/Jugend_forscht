@@ -26,7 +26,6 @@ ScreenManagement:
         GridLayout:
             rows: 1
             Image:
-                #pos: -128, -192
 			    source: 'sources/icons/tw.png'
                 on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opentw')
             Image:
@@ -207,10 +206,10 @@ ScreenManagement:
             source: 'sources/calculator/9.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.calculate(9)
 		Image:
-			source: 'sources/calculator/multiplyb.png'
+			source: 'sources/calculator/multiply.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("*")
 		Image:
-			source: 'sources/calculator/divideb.png'
+			source: 'sources/calculator/divide.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("/")
 	    Image:
             source: 'sources/calculator/space.png'
@@ -223,13 +222,13 @@ ScreenManagement:
             source: 'sources/calculator/comma.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.calculate(14)
         Image:
-			source: 'sources/calculator/plusb.png'
+			source: 'sources/calculator/plus.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("+")
         Image:
-			source: 'sources/calculator/minusb.png'
+			source: 'sources/calculator/minus.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.changeoperator("-")
         Image:
-			source: 'sources/calculator/equalsb.png'
+			source: 'sources/calculator/equals.png'
 			on_touch_down: if self.collide_point(*args[1].pos): root.giveresult()
 
 # ________ NUMBPAD ________
@@ -339,7 +338,7 @@ ScreenManagement:
         GridLayout:
             rows: 1
             Image:
-                source: 'sources/spotify/blank.png'
+                source: 'sources/spotify/artist.png'
                 size_hint_x: 0.4
                 allow_stretch: True
             GridLayout:

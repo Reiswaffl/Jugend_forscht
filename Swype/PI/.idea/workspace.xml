@@ -2,56 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenmanagerv2/TouchHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Bilder etc/Markierung bestimmter Strings.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bilder etc/Markierung bestimmter Strings.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/PC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/PC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/CoreScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/CoreScript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/ScreenHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/ScreenHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Numpad.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Numpad.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Spotify.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Spotify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/calculator/esc.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/calculator/esc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/calculator/times.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/icons/calculator.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/icons/calculator.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/clear.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/delete.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/enter.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/enter.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/enter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/equals.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/equals.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/equals.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/esc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/insert.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/minus.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/minus.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/minus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/page down.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/page up.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/plus.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/plus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/point.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/slash.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/space.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/space.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/numpad/star.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/sources/spotify/volume.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/sources/spotify/volume.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/writerScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/writerScript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmananger/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmananger/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZXsensorController.py" beforeDir="false" afterPath="$PROJECT_DIR$/ZXsensorController.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,22 +18,10 @@
       <file leaf-file-name="CoreScript.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Screenmanagerv2/CoreScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#57#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TouchHandler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/TouchHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="e#43#84#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,77 +30,20 @@
       <file leaf-file-name="kivyfile.kv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="17">
+              <caret line="201" column="14" lean-forward="true" selection-start-line="201" selection-start-column="14" selection-end-line="201" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainScreen.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen.py">
+      <file leaf-file-name="ZXsensorController.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ZXsensorController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#15#81#0" expanded="true" />
+                <element signature="e#15#27#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Numpad.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/Numpad.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="e#1#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/Calculator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-              <folding>
-                <element signature="e#1#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spotify.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/Spotify.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-              <folding>
-                <element signature="e#19#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainScreen2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScreenHandler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Screenmanagerv2/ScreenHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -188,10 +72,11 @@
         <option value="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen3.py" />
         <option value="$PROJECT_DIR$/Screenmanagerv2/ScreenHandler.py" />
         <option value="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Spotify.py" />
-        <option value="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" />
         <option value="$PROJECT_DIR$/Screenmanagerv2/TouchHandler.py" />
         <option value="$PROJECT_DIR$/Screenmanagerv2/CoreScript.py" />
         <option value="$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen2.py" />
+        <option value="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" />
+        <option value="$PROJECT_DIR$/ZXsensorController.py" />
       </list>
     </option>
   </component>
@@ -215,22 +100,6 @@
             <path>
               <item name="PI" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI" type="462c0819:PsiDirectoryNode" />
-              <item name="Screenmanagerv2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI" type="462c0819:PsiDirectoryNode" />
-              <item name="Screenmanagerv2" type="462c0819:PsiDirectoryNode" />
-              <item name="screenclasses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI" type="462c0819:PsiDirectoryNode" />
-              <item name="Screenmananger" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -344,10 +213,10 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5026022" side_tool="true" visible="true" weight="0.31866667" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5026022" side_tool="true" visible="true" weight="0.31866667" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49739778" visible="true" weight="0.31866667" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49739778" visible="true" weight="0.31866667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -505,22 +374,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#1#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#1#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmananger/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="14" />
+          <folding>
+            <element signature="e#41#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/ScreenHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZX_Sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -535,19 +430,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Screenmananger/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="14" />
+        <state relative-caret-position="1156">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
-            <element signature="e#41#54#0" expanded="true" />
+            <element signature="e#1#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,17 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/ScreenHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Screenmanagerv2/TouchHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#43#84#0" expanded="true" />
           </folding>
@@ -581,20 +462,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Screenmanagerv2/CoreScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#57#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/screenclasses/MainScreen2.py">
+    <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="17">
+          <caret line="201" column="14" lean-forward="true" selection-start-line="201" selection-start-column="14" selection-end-line="201" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ZXsensorController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#15#27#0" expanded="true" />
           </folding>
         </state>
       </provider>

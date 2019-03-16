@@ -92,12 +92,3 @@ class SensorController:
             pass
         else:
             self.state = 0
-
-
-sensorController = SensorController()
-
-while True:
-    sensorController.receiveZpos()
-    sensorController.receiveGesture()
-    sensorController.handleData()
-    time.sleep(0.2)
