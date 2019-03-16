@@ -20,10 +20,10 @@ def handleShortcut(command, shortcut):
 
 def handleMouse(xMovement, yMovement, speed):
     try:
-        win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, int(int(xMovement)*speed), int(int(yMovement)*speed))
+        win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, int(int(xMovement) * speed), int(int(yMovement) * speed))
     except:
         print("mouse movement failed")
-        print(int(xMovement)*speed, xMovement, speed)
+        print(int(xMovement) * speed, xMovement, speed)
 
 
 def hotkey(shortcut):
@@ -59,6 +59,14 @@ def runProgramm(path):
 
 
 def numPad(key):
+    try:
+        pyautogui.keyDown(key)
+        pyautogui.keyUp(key)
+    except:
+        pass
+
+
+def write(key):
     try:
         pyautogui.keyDown(key)
         pyautogui.keyUp(key)

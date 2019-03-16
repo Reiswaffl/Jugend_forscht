@@ -16,6 +16,29 @@ class Logic:
     def start(self, com):
         return serial.start(com)
 
+    def inputHandling(self):
+        incoming_data = serial.getIncomingData()
+        if 'M' in incoming_data:
+            print('M')
+            global mouseSpeed
+            movement = incoming_data.replace('\n', '').replace('M', '')
+            x, y = movement.split(',')
+            mouseControl.handleMouse(x, y, mouseSpeed)
+        elif 'W' in incoming_data:
+            print('W')
+            key = incoming_data.replace('\n', '').replace('W', '')
+            mouseControl.write(key)
+        elif 'R' in incoming_data:
+            print('R')
+            mouseControl.releaseAll()
+        elif 'SC' in incoming_data:
+            print('SC')
+
+        elif 'S' in incoming_data:
+            print('S')
+            volume = incoming_data.replace('\n', '').replace('S', '')
+            mouseControl.volume(volume)
+
     def handleInput(self):
         incoming_data = serial.getIncomingData()
         print(incoming_data)

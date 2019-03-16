@@ -73,13 +73,11 @@ def on_touch_up(self, touch, Screen):
     if touchcounter > 1:
         leftclick = False
     if end - start < delta and touchcounter == 2:
-        pass
-        # send("c2")
-    # normaler rechtsklick
+        write_Shortcut("rc")
+        # normaler rechtsklick
     if leftclick and end - start < delta:
-        pass
-        # send("c1")
-    # normaler linksklick
+        write_Shortcut("lc")
+        # normaler linksklick
     touchcounter -= 1
     if touchcounter == 0:
         leftclick = True
@@ -90,9 +88,8 @@ def on_touch_up(self, touch, Screen):
             return True
         if not self.collide_point(*touch.pos):
             return False
-    # write_release()
+    write_release()
     # sichergehen, dass alle Tasten losgelassen werden
-    pass
 
 
 def calculate_dx_dy(inx, iny):
@@ -105,9 +102,7 @@ def calculate_dx_dy(inx, iny):
         nmpx, nmpy = inx, iny
         dx = nmpx - ompx
         dy = nmpy - ompy
-
         ompx = nmpx
         ompy = nmpy
-
     dx = int(dx)
     dy = int(dy)

@@ -49,7 +49,6 @@ class Reader:
 
     def setShortcut(self, id, shortcut):
         for child in self.getSaves():
-
             if child.get('id') == id:
                 child.text = shortcut
                 self.doc.write(self.fullname)

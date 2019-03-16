@@ -23,7 +23,7 @@ class MainScreen(Screen):
         on_touch_down(self, touch, Screen)
 
     def on_touch_move(self, touch):
-        on_touch_move(Screen, touch, Screen)
+        on_touch_move(self, touch, Screen)
 
     def on_touch_up(self, touch):
-        on_touch_up(Screen, touch, Screen)
+        on_touch_up(self, touch, Screen)

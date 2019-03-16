@@ -6,7 +6,6 @@ from Screenmanagerv2.TouchHandler import *
 class Numpad(Screen):
     def send(self, value):
         write_write(value)
-        print("sent " + str(value))
 
     def getHome(self):
         return gethome()
@@ -19,3 +18,6 @@ class Numpad(Screen):
 
     def on_touch_up(self, touch):
         on_touch_up(self, touch, Screen)
+
+    def sendSH(self, value):
+        write_Shortcut(value)

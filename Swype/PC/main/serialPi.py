@@ -12,7 +12,7 @@ class Ser:
             # setup for serial-interface
             time.sleep(1)
 
-            if (self.Pi_Serial.isOpen()):  # opens it again, if its open already (to minimize error rate)
+            if self.Pi_Serial.isOpen():  # opens it again, if its open already (to minimize error rate)
                 self.Pi_Serial.close()
                 self.Pi_Serial.open()
             return None
@@ -26,5 +26,5 @@ class Ser:
         except:
             return '-'
 
-    def write(self,data):
+    def write(self, data):
         self.Pi_Serial.write(data)
