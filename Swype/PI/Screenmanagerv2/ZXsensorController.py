@@ -67,8 +67,10 @@ class SensorController:
     def checkGesture(self):
         if self.gesture == 1:
             print("swipe")
+            write_Shortcut('swipe')
         elif self.gesture == 2:
             print("swipe 2")
+            write_Shortcut('swipe2')
 
     def handleData(self):
         print("_______wrong_____")
