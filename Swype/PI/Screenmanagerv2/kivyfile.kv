@@ -51,9 +51,6 @@ ScreenManagement:
         GridLayout:
             rows: 3
             Image:
-                source: 'sources/icons/word.png'
-                on_touch_down: if self.collide_point(*args[1].pos): app.root.current = 'Word'
-            Image:
                 source: 'sources/icons/stick.png'
                 on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('opensticky')
             Image:
@@ -65,6 +62,9 @@ ScreenManagement:
             Image:
                 source: 'sources/icons/chrome.png'
                 on_touch_down: if self.collide_point(*args[1].pos): root.writeshortcut('openchrome')
+            Image:
+                source: 'sources/icons/word.png'
+                on_touch_down: if self.collide_point(*args[1].pos): app.root.current = 'Word'
             Image:
                 source: 'sources/icons/spot.png'
                 on_touch_down: if self.collide_point(*args[1].pos): app.root.current = "Spotify"
@@ -189,7 +189,6 @@ ScreenManagement:
         cols: 5
         Image:
             source: 'sources/numpad/space.png'
-            on_touch_down: if self.collide_point(*args[1].pos): app.root.current = root.getHome()
         Image:
             source: 'sources/numpad/slash.png'
             on_touch_down: if self.collide_point(*args[1].pos): root.send('/')
@@ -270,6 +269,7 @@ ScreenManagement:
             Image:
                 source: 'sources/spotify/logo.png'
                 size_hint_x: 1
+                on_touch_down: if self.collide_point(*args[1].pos): root.startSpotify()
             Image:
                 source: 'sources/spotify/space.png'
             Label:
@@ -319,6 +319,7 @@ ScreenManagement:
                         step: 1
                         value_track: True
                         value_track_color: 0.2, 0.5, 0.1, 1.0
+                        on_touch_up: if self.collide_point(*args[1].pos): root.setVolume(self.value)
                     Image:
                         source: 'sources/spotify/space.png'
         GridLayout:
@@ -375,3 +376,9 @@ ScreenManagement:
             size_hint: 0.1, 0.2
             background_color: 1, 1, 1, 0
             on_press: app.root.current = root.getHome()
+        Button:
+            id: bttn_openw
+            pos: 5, 490
+            size_hint: 0.15, 0.25
+            background_color: 1, 1, 1, 0
+            on_press: root.open('openword')

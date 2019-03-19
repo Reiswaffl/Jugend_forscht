@@ -33,7 +33,8 @@ class Logic:
             mouseControl.releaseAll()
         elif 'SC' in incoming_data:
             print('SC')
-
+        elif 'SP' in incoming_data:
+            print('SP')
         elif 'S' in incoming_data:
             print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')

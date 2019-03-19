@@ -1,10 +1,10 @@
 import spotipy
-import spotilib
+import spotify.spotilib
 
 sp = spotipy.Spotify()
 
 def find_metadata():
-	results = sp.search(q=spotilib.song(), limit=50)
+	results = sp.search(q=spotify.spotilib.song(), limit=50)
 	for i, t in enumerate(results['tracks']['items']):
 		artist_meta = str(t['artists'])
 		temp_artist_meta = artist_meta.split(',')
@@ -13,7 +13,7 @@ def find_metadata():
 		
 		artist, artist_uri = get_artist_uri(n=len(temp_artist_meta), dataset=temp_artist_meta)
 		
-		if spotilib.artist() in artist and track == spotilib.song():
+		if spotify.spotilib.artist() in artist and track == spotify.spotilib.song():
 			return track, track_uri, artist, artist_uri
 			
 
@@ -36,7 +36,7 @@ def get_artist_uri(n, dataset):
 def artists(Type):
 	if find_metadata() is None:
 		print "spotimeta wasn\'t able to get all metadata of current song"
-		return spotilib.artist()
+		return spotify.spotilib.artist()
 	elif Type == 'name':
 		return find_metadata()[2]
 	elif Type == "uri":
@@ -47,7 +47,7 @@ def artists(Type):
 def track(Type):
 	if find_metadata() is None:
 		print "spotimeta wasn\'t able to get all metadata of current song"
-		return spotilib.song()
+		return spotify.spotilib.song()
 	elif Type == 'name':
 		return find_metadata()[0]
 	elif Type == "uri":

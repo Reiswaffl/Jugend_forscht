@@ -49,18 +49,19 @@ def on_touch_down(self, touch, Screen):
 def on_touch_move(self, touch, Screen):
     global end, start, delta2, hold, dx, dy
     end = time.time()  # GPIO.input(40) == False and
-    if end - start > delta2:
-        touch_input = touch.pos
-        calculate_dx_dy(touch_input[0], touch_input[1])
-        if hold:
-            pass
+    if not True:
+        if end - start > delta2:
+            touch_input = touch.pos
+            calculate_dx_dy(touch_input[0], touch_input[1])
+            if hold:
+                pass
             # linksklick gedrückt halten
             # send("c3")
             # self.send(0)
-        else:
-            write_Movement(dx, dy)
+            else:
+                write_Movement(dx, dy)
             # self.send(0)  # Mausbewegung abgreifen
-    elif True:  # GPIO.input(40):
+    else:  # GPIO.input(40):
         if super(Screen, self).on_touch_down(touch):
             return True
         if not self.collide_point(*touch.pos):

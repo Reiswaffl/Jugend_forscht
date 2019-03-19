@@ -1,4 +1,4 @@
-import spotifyAPI
+from spotify import spotifyAPI
 import time
 
 spotifyAPI.getToken()

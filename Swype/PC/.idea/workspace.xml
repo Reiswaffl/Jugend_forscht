@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/main/spotifyAPI.py" line="35" />
+    <bookmark url="file://$PROJECT_DIR$/spotify/spotifyAPI.py" line="35" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba355456-1a17-4a84-ae30-40c73a4c6401" name="Default" comment="" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="logic.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="logic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="527">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -42,16 +42,25 @@
         <entry file="file://$PROJECT_DIR$/main/serialHandling.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mouseControl.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mouseControl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/mouseControl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-478">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="221">
+              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -124,11 +133,6 @@
             <path>
               <item name="PC" type="b2602c69:ProjectViewProjectNode" />
               <item name="PC" type="462c0819:PsiDirectoryNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PC" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -142,12 +146,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Reiswaffel\Documents\GitHub\Jugend_forscht\Swype\PC\main" />
-      <recent name="C:\Users\Reiswaffel\Documents\GitHub\Jugend_forscht\Swype\PC\API\web-api-auth-examples-master\authorization_code" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Reiswaffel\Documents\GitHub\Jugend_forscht\Swype\PC\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shubanuffa\Documents\GitHub\Jugend_forscht\Swype\PC\spotify" />
+      <recent name="C:\Users\Reiswaffel\Documents\GitHub\Jugend_forscht\Swype\PC\main" />
+      <recent name="C:\Users\Reiswaffel\Documents\GitHub\Jugend_forscht\Swype\PC\API\web-api-auth-examples-master\authorization_code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,7 +216,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/spotifyAPI.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Shubanuffa\Documents\GitHub\Jugend_forscht\Swype\PC\spotify\spotifyAPI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -597,16 +602,9 @@
     <entry file="file://C:/Python27/Lib/spotipy/util.py" />
     <entry file="file://$PROJECT_DIR$/API/web-api-auth-examples-master/server/server.js" />
     <entry file="file://$PROJECT_DIR$/API/web-api-auth-examples-master/authorization_code/app.js" />
-    <entry file="file://$PROJECT_DIR$/main/spotimeta.py" />
+    <entry file="file://$PROJECT_DIR$/spotify/spotimeta.py" />
     <entry file="file://$PROJECT_DIR$/API/test_01.py" />
     <entry file="file://$PROJECT_DIR$/API/test_02.py" />
-    <entry file="file://$PROJECT_DIR$/main/spotifyAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/serialPi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -617,15 +615,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/spotilib.py">
+    <entry file="file://$PROJECT_DIR$/spotify/spotilib.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/UserInterface.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -643,6 +634,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/serialHandling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spotify/spotifyAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -653,27 +665,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/serialHandling.py">
+    <entry file="file://$PROJECT_DIR$/main/logic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/mouseControl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-478">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="527">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/logic.py">
+    <entry file="file://$PROJECT_DIR$/main/mouseControl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="221">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

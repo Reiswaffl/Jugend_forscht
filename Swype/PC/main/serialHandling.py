@@ -1,6 +1,7 @@
 import logic
 import time
-import spotifyAPI
+from spotify import spotifyAPI
+
 last = time.time()
 lastname = None
 logic = logic.Logic()

@@ -8,6 +8,9 @@ class Word(Screen):
         write_write(value)
         print("sent " + str(value))
 
+    def open(self, value):
+        write_Shortcut(value)
+
     def getHome(self):
         return gethome()
 
