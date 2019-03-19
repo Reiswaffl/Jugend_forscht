@@ -1,6 +1,6 @@
 import logic
 import time
-import spotifyAPI
+import spotify.spotifyAPI
 
 
 logic = logic.Logic()

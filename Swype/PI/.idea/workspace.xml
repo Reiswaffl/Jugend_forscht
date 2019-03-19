@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../PC/spotify/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Bilder etc/Markierung bestimmter Strings.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bilder etc/Markierung bestimmter Strings.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PC/.idea/PC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/PC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PC/main/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/serialHandling.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/serialHandling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/spotifyAPI.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/spotilib.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/spotimeta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PC/spotify/spotifyAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/spotify/spotifyAPI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/SensorThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/SensorThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/TouchHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/TouchHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Spotify.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Spotify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Word.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/screenclasses/Word.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenmanagerv2/writerScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screenmanagerv2/writerScript.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +21,8 @@
       <file leaf-file-name="kivyfile.kv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="189" column="14" lean-forward="true" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+            <state relative-caret-position="3213">
+              <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -98,12 +88,6 @@
               <item name="PI" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI" type="462c0819:PsiDirectoryNode" />
               <item name="Screenmanagerv2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI" type="462c0819:PsiDirectoryNode" />
-              <item name="Screenmanagerv2" type="462c0819:PsiDirectoryNode" />
-              <item name="screenclasses" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -610,8 +594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Screenmanagerv2/kivyfile.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="189" column="14" lean-forward="true" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+        <state relative-caret-position="3213">
+          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
         </state>
       </provider>
     </entry>

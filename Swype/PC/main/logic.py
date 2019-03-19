@@ -1,21 +1,24 @@
 import data
 import serialPi
 import mouseControl
-import spotifyAPI
+import spotify.spotifyAPI as spotifyAPI
 import time
 serial = serialPi.Ser()
 reader = data.Reader()
 mouseSpeed = 1.7
 click = 0
 
+
 class Logic:
     last = 0
     counter = 0
     progress = 0
     lastname = 0
+
     def __init__(self):
         self.clickcounter = 0
         spotifyAPI.getToken()
+
     def start(self, com):
         return serial.start(com)
 
