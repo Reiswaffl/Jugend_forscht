@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/PC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/PC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/spotify/spotifyAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/spotify/spotifyAPI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

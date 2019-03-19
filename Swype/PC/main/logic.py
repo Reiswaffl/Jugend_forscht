@@ -45,8 +45,6 @@ class Logic:
             print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')
             mouseControl.volume(volume)
-        elif 'A' in incoming_data: # A for API (Spotify API)
-            print("A")
 
     def handleInput(self):
         incoming_data = serial.getIncomingData()
@@ -90,7 +88,7 @@ class Logic:
         if 'r' in incoming_data:  # release all mouse buttons
             mouseControl.releaseAll()
 
-    def spotifyHandling(self): # noch in der Testphase
+    def spotifyHandling(self):  # noch in der Testphase
         if time.time() - self.last > 1:
             # one second passed
             self.last = time.time()
@@ -118,8 +116,8 @@ class Logic:
     def getShortCut(self, id):
         return reader.getCommand(id), reader.getShortcut(id)
 
-    def sendTime(self,time):
+    def sendTime(self, time):
         serial.write(time)
 
-    def sendAll(self,song,artist,time):
+    def sendAll(self, song, artist, time):
         serial.write(song + ',' + artist + ',' + time)
