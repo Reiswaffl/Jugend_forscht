@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/UserInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/UserInterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +219,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49962825" weight="0.32933334" />
