@@ -1,15 +1,77 @@
+# coding=utf-8
 import Tkinter as tkr
-import logic
 import subprocess
+from logic import *
 
 global p
+
+
+class DisplayingClass(tkr.Tk):
+    def __init__(self):
+        tkr.Tk.__init__(self)
+        self.logic = Logic()
+        self.r = dataWriterReader.Reader()
+        self.shortcuts = self.r.getShortcuts()
+        self.spotifyShortcuts = self.r.getSpotifyShortcuts()
+
+        self.title("Swypad Window")
+
+        # crazy Shit für eine sehr sehr einfache Oberfläche
+        self.shortcut = []
+        tkr.Label(self, text="Shortcutoptions", font=("Arial", 18)).grid(row=0)
+        tkr.Label(self, text="COM: ", font=("Arial", 16)).grid(row=0, column=3)
+        self.comBox = tkr.Entry()
+        self.comBox.grid(row=0, column=4)
+        self.comBox.insert(0, self.logic.getCOM())
+
+        self.z = 25
+        self.z2 = 0
+        self.z3 = 0
+        try:
+            for i in range(self.z):
+                tkr.Label(self, text=self.shortcuts[i].get('command'), font=("Arial", 16)).grid(row=i+1, column=0)
+                self.z2 += 1
+        except:
+            pass
+
+        try:
+            for i in range(self.z):
+                tkr.Label(self, text=self.spotifyShortcuts[i].get('command'), font=("Arial", 16)).grid(row=i+1, column=3)
+                self.z3 += 1
+        except:
+            pass
+        for i in range(self.z2):
+            self.shortcut.append(tkr.Entry())
+            self.shortcut[i + 0].grid(row=(1 + (i % self.z2)), column=2)
+            self.shortcut[i + 0].insert(0, str(self.shortcuts[i].text))
+        for i in range(self.z3):
+            self.shortcut.append(tkr.Entry())
+            self.shortcut[i + self.z2].grid(row=(1 + (i % self.z2)), column=4)
+            self.shortcut[i + self.z2].insert(0, str(self.spotifyShortcuts[i].text))
+
+        self.selectbutton = tkr.Button(master=self, text="Save Config", command=self.select, font=("Arial", 16))
+        self.selectbutton.grid(row=self.z2+1, column=4)
+
+    def select(self):
+        try:
+            for i in range(self.z2):
+                self.r.setShortcut(str(i), self.shortcut[i].get())
+        except:
+            pass
+        try:
+            for i in range(self.z3):
+                self.r.setSpotifyShortcut(str(i), self.shortcut[i + self.z2].get())
+        except:
+            pass
+
+        self.r.setCOM(self.comBox.get())
 
 
 class UserInterface(tkr.Tk):
     serialRunning = False
 
     def __init__(self):
-        self.logic = logic.Logic()
+        self.logic = Logic()
         tkr.Tk.__init__(self)
         self.COMMAND = [
             "hotkey",
@@ -90,8 +152,8 @@ class UserInterface(tkr.Tk):
         for i in range(4):
             self.shortcut[i + index] = tkr.Entry()
             self.shortcut[i + index].grid(row=(rowOffset + (i % 4)), column=columnOffset)
-            c, s = self.logic.getShortCut(str(i + index))
-            self.shortcut[i + index].insert(0, s)
+            #c, s = self.logic.getShortCut(str(i + index))
+            #self.shortcut[i + index].insert(c, s)
             # self.shortcut[i+index] = tkr.OptionMenu(self,self.sh[i+index],*self.SHORTCUTS)
             # self.shortcut[i+index].configure(font=("Arial", 16))
             # self.shortcut[i+index].grid(row=(rowOffset+(i%4)),column=columnOffset)
@@ -133,11 +195,11 @@ class UserInterface(tkr.Tk):
         pass
 
 
-interface = UserInterface()
+'''interface = UserInterface()
 interface.buildInterface()
 interface.mainloop()
 try:
     global p
     p.terminate()
 except:
-    pass
+    pass'''
