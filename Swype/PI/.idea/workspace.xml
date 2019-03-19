@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="88fd0fde-02b1-41cd-9c66-c9d8bbad6942" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../PC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/MelwinsTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/MelwinsTests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PC/main/UserInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/UserInterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/dataWriterReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/dataWriterReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/main/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/main/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PC/resources/shortcut_assignment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PC/resources/shortcut_assignment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
