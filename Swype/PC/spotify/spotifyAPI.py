@@ -1,7 +1,13 @@
 import requests
 from requests_oauthlib import OAuth2Session
 import json
-import time
+import win32api
+import win32gui
+#Windows VirtualKeyCoed
+mediaNext = 0xB0
+mediaLast = 0xB1
+mediaPause = 0xB3
+
 result = None
 data = None
 authorization_response = None
@@ -47,9 +53,19 @@ def getInfo():
                 client_secret=client_secret)
             return None,None,None
 
-getToken()
-getJson()
-while 1:
-    getJson()
-    getInfo()
-    time.sleep(2)
+def hwcode(Media):
+	hwcode = win32api.MapVirtualKey(Media, 0)
+	return hwcode
+
+def nextSong():
+    win32api.keybd_event(mediaNext,hwcode(mediaNext))
+
+def lastSong():
+    win32api.keybd_event(mediaLast,hwcode(mediaLast))
+
+def pause():
+    win32api.keybd_event(mediaPause,hwcode(mediaPause))
+
+def play():
+    win32api.keybd_event(mediaPause,hwcode(mediaPause))
+

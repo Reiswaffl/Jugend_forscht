@@ -1,18 +1,21 @@
 import data
 import serialPi
 import mouseControl
-
+import spotifyAPI
+import time
 serial = serialPi.Ser()
 reader = data.Reader()
 mouseSpeed = 1.7
 click = 0
 
-
 class Logic:
-
+    last = 0
+    counter = 0
+    progress = 0
+    lastname = 0
     def __init__(self):
         self.clickcounter = 0
-
+        spotifyAPI.getToken()
     def start(self, com):
         return serial.start(com)
 
@@ -39,6 +42,8 @@ class Logic:
             print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')
             mouseControl.volume(volume)
+        elif 'A' in incoming_data: # A for API (Spotify API)
+            print("A")
 
     def handleInput(self):
         incoming_data = serial.getIncomingData()
@@ -81,6 +86,21 @@ class Logic:
             mouseControl.leftDown()
         if 'r' in incoming_data:  # release all mouse buttons
             mouseControl.releaseAll()
+
+    def spotifyHandling(self): # noch in der Testphase
+        if time.time() - self.last > 1:
+            # one second passed
+            self.last = time.time()
+            self.sendTime(self.progress + self.counter)
+            self.counter += 1
+            if self.counter >= 5:
+                spotifyAPI.getJson()
+                song, artist, self.progress = spotifyAPI.getInfo()
+                self.counter = 0
+                if song != self.lastname:
+                    self.sendAll(song, artist, self.progress)
+                else:
+                    self.sendTime(self.progress)
 
     def writeShortcut(self, id, command, shortcut):
         reader.setCommand(id, command)
