@@ -5,7 +5,6 @@ path = "../resources"
 
 
 class Reader:
-
     def __init__(self):
         for filename in os.listdir(path):
             if not filename.endswith('.xml'):
@@ -16,7 +15,7 @@ class Reader:
 
     def getSpecificShortcut(self, id):
         for child in self.root:
-            if child.tag == 'shortcut':
+            if child.tag == 'shortcuts':
                 return child.get(id)
         return None
 
@@ -58,6 +57,14 @@ class Reader:
                 return child
         return None
 
+    def getSSCasArray(self):  # spotify-shortcuts as array
+        array = []
+        for child in self.root[3]:
+            if child.tag == 'shortcut':
+                array.append(child)
+        print(array)
+        return array
+
     def setSpotifyShortcut(self, id, value):
         for child in self.getSpotifyShortcuts():
             if child.get('id') == id:
@@ -66,6 +73,21 @@ class Reader:
                 return child
         return None
 
+    def getSSHasArray(self):  # spotify-shortcuts as array
+        array = []
+        for child in self.root[3]:
+            if child.tag == 'shortcut':
+                array.append(child)
+        print(array)
+        return array
+
+    def getSavesArray(self):
+        array = []
+        for child in self.root[1]:
+            if child.tag == 'shortcut':
+                array.append(child)
+        return array
+
     def getCOM(self):
         for child in self.root:
             if child.tag == 'COM':
@@ -73,10 +95,11 @@ class Reader:
         return None
 
     def getSaves(self):
+        result = []
         for child in self.root:
             if child.tag == 'saves':
-                return child
-        return None
+                result.append(child)
+        return result
 
     def getCommand(self, id):
         for child in self.getSaves():

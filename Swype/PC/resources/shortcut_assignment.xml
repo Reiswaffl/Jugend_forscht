@@ -1,5 +1,5 @@
 <root>
-    <COM com="COM8" />
+    <COM com="COM6" />
     <saves>
         <shortcut command="hotkey" id="0">ctrl+v</shortcut>
         <shortcut command="hotkey" id="1">ctrl+c</shortcut>
@@ -11,14 +11,14 @@
         <shortcut command="program" id="7">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
     </saves>
     <shortcuts>
-        <shortcut command="openchrome" id="0">neii</shortcut>
-        <shortcut command="openmail" id="1">neii</shortcut>
-        <shortcut command="opencalendar" id="2">neii</shortcut>
-        <shortcut command="opensticky" id="3">neii</shortcut>
-        <shortcut command="openspotify" id="4">neii</shortcut>
-        <shortcut command="copy" id="5">neii</shortcut>
-        <shortcut command="paste" id="6">neii</shortcut>
-        <shortcut command="cut" id="7">neii</shortcut>
+        <shortcut command="openchrome" id="0">788</shortcut>
+        <shortcut command="openmail" id="1">20</shortcut>
+        <shortcut command="opencalendar" id="2">1</shortcut>
+        <shortcut command="opensticky" id="3">None</shortcut>
+        <shortcut command="openspotify" id="4">one</shortcut>
+        <shortcut command="copy" id="5">20</shortcut>
+        <shortcut command="paste" id="6">None</shortcut>
+        <shortcut command="cut" id="7">None</shortcut>
         <shortcut command="takescreen" id="8">neii</shortcut>
         <shortcut command="enter" id="9">neii</shortcut>
         <shortcut command="opentw" id="10">neii</shortcut>
@@ -32,15 +32,15 @@
         <shortcut command="hc" id="0">neii</shortcut>
     </shortcuts>
     <spotify>
-        <shortcut command="play" id="0">test3</shortcut>
-        <shortcut command="pause" id="1">test1</shortcut>
-        <shortcut command="forward" id="2">test1</shortcut>
-        <shortcut command="getValue" id="3">test1</shortcut>
-        <shortcut command="getVolume" id="4">test1</shortcut>
-        <shortcut command="getTitle" id="5">test1</shortcut>
-        <shortcut command="back" id="6">test1</shortcut>
-        <shortcut command="getRange" id="7">test1</shortcut>
-        <shortcut command="v" id="8">test1</shortcut>
-        <shortcut command="startSpotify" id="9">test1</shortcut>
+        <shortcut command="play" id="0">play the Music!</shortcut>
+        <shortcut command="pause" id="1">10</shortcut>
+        <shortcut command="forward" id="2">None</shortcut>
+        <shortcut command="getValue" id="3">None</shortcut>
+        <shortcut command="getVolume" id="4">neii</shortcut>
+        <shortcut command="getTitle" id="5">neii</shortcut>
+        <shortcut command="back" id="6">neii</shortcut>
+        <shortcut command="getRange" id="7">neii</shortcut>
+        <shortcut command="v" id="8">neii</shortcut>
+        <shortcut command="startSpotify" id="9">neii</shortcut>
     </spotify>
 </root>
