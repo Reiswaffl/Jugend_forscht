@@ -1,10 +1,10 @@
-import data
+import dataWriterReader
 import serialPi
 import mouseControl
 import spotify.spotifyAPI as spotifyAPI
 import time
 serial = serialPi.Ser()
-reader = data.Reader()
+reader = dataWriterReader.Reader()
 mouseSpeed = 1.7
 click = 0
 
@@ -41,6 +41,7 @@ class Logic:
             print('SC')
         elif 'SP' in incoming_data:
             print('SP')
+
         elif 'S' in incoming_data:
             print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')

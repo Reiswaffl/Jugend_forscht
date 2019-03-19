@@ -14,6 +14,58 @@ class Reader:
             self.doc = ET.parse(self.fullname)
         self.root = self.doc.getroot()
 
+    def getSpecificShortcut(self, id):
+        for child in self.root:
+            if child.tag == 'shortcut':
+                return child.get(id)
+        return None
+
+    def getSSHbyTag(self, tag):
+        for child in self.getShortcuts():
+            if child.get('command') == tag:
+                return child
+        return None
+
+    def getShortcuts(self):
+        for child in self.root:
+            if child.tag == 'shortcuts':
+                return child
+        return None
+
+    def setShortcut(self, id, value):
+        for child in self.getShortcuts():
+            if child.get('id') == id:
+                child.text = value
+                self.doc.write(self.fullname)
+                return child
+        return None
+
+    def getSpecificSpotifyShortcut(self, id):
+        for child in self.getSpotifyShortcuts():
+            if child.get('id') == id:
+                return child
+        return
+
+    def getSSSbyTag(self, tag):
+        for child in self.getSpotifyShortcuts():
+            if child.get('command') == tag:
+                return child
+        return None
+
+    def getSpotifyShortcuts(self):
+        for child in self.root:
+            if child.tag == 'spotify':
+                return child
+        return None
+
+    def setSpotifyShortcut(self, id, value):
+        for child in self.getSpotifyShortcuts():
+            if child.get('id') == id:
+                child.text = value
+                self.doc.write(self.fullname)
+                return child
+        return None
+
     def getCOM(self):
         for child in self.root:
             if child.tag == 'COM':
@@ -47,13 +99,13 @@ class Reader:
                 return child.get('command')
         return None
 
-    def setShortcut(self, id, shortcut):
+    '''def setShortcut(self, id, shortcut):
         for child in self.getSaves():
             if child.get('id') == id:
                 child.text = shortcut
                 self.doc.write(self.fullname)
                 return child.text
-        return None
+        return None'''
 
     def setCOM(self, com):
         for child in self.root:
