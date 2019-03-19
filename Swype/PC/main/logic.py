@@ -1,7 +1,7 @@
 import dataWriterReader
 import serialPi
 import mouseControl
-# import spotify.spotifyAPI as spotifyAPI
+import spotify.spotifyAPI as spotifyAPI
 import time
 serial = serialPi.Ser()
 reader = dataWriterReader.Reader()
