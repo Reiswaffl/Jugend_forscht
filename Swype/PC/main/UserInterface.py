@@ -13,6 +13,8 @@ class DisplayingClass(tkr.Tk):
         self.r = dataWriterReader.Reader()
         self.shortcuts = self.r.getShortcuts()
         self.spotifyShortcuts = self.r.getSpotifyShortcuts()
+        self.running = False
+        self.p = None
 
         self.title("Swypad Window")
 
@@ -49,8 +51,10 @@ class DisplayingClass(tkr.Tk):
             self.shortcut[i + self.z2].grid(row=(1 + (i % self.z2)), column=4)
             self.shortcut[i + self.z2].insert(0, str(self.spotifyShortcuts[i].text))
 
-        self.selectbutton = tkr.Button(master=self, text="Save Config", command=self.select, font=("Arial", 16))
+        self.selectbutton = tkr.Button(master=self, text="Save Config", command=self.select, font=("Arial", 14))
         self.selectbutton.grid(row=self.z2+1, column=4)
+        self.startButton = tkr.Button(master=self, text="start Connection", command=self.start, font=("Arial", 14))
+        self.startButton.grid(row=self.z2+1, column=3)
 
     def select(self):
         try:
@@ -65,6 +69,18 @@ class DisplayingClass(tkr.Tk):
             pass
 
         self.r.setCOM(self.comBox.get())
+
+    def start(self):
+        if not self.running:
+            print('started')
+            self.running = True
+            self.startButton.config(text='stop Connection')
+            self.r.setCOM(self.comBox.get())
+            self.p = subprocess.Popen(['python', 'serialHandling.py', 'arg1', 'arg2'])
+        else:
+            self.running = False
+            self.startButton.config(text='start Connection')
+            self.p.terminate()
 
 
 class UserInterface(tkr.Tk):
