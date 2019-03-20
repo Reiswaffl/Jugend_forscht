@@ -39,11 +39,12 @@ def getToken():
 
 
 def getJson():
-    if not crashed:
+    try:
         global data
         result = oauth.get('https://api.spotify.com/v1/me/player')  # returns informations
         data = json.loads(result.text)  # convert to json
-
+    except:
+        pass
 
 def getInfo():
     global crashed
@@ -54,8 +55,7 @@ def getInfo():
             artist = items["artists"][0]["name"]
             progress = str(data["progress_ms"] / 1000)
             volume = data["device"]["volume_percent"]
-            print("Song: " + songName + " Artist: " + str(
-                artist) + " Progress: " + progress + " Volume in percent: " + volume)
+            #print("Song: " + songName + " Artist: " + str(artist) + " Progress: " + progress + " Volume in percent: " + volume)
             return songName, artist, progress, volume
         except:
             try:
@@ -63,11 +63,11 @@ def getInfo():
                     'https://accounts.spotify.com/api/token',
                     authorization_response=authorization_response,
                     client_secret=client_secret)
-                return None, None, None
+                return None, None, None, None
             except:
                 crashed = True
-    else:  # SpotifyAPI broke
-        get_info_windows()
+    else: # SpotifyAPI broke
+        return get_info_windows(),None,None
 
 
 def hwcode(Media):
@@ -101,7 +101,7 @@ def get_info_windows():
             windows.append(text)
 
     win32gui.EnumWindows(find_spotify_uwp, windows)
-    print('Starting shit')
+    print('Starting win32api')
     while windows.count != 0:
         try:
             text = windows.pop()
@@ -110,13 +110,15 @@ def get_info_windows():
             return "Error", "Nothing playing"
         try:
             artist, track = text.split(" - ", 1)
-            print(artist, track)
+            #print( artist, track )
+            return artist,track
         except:
             print('Error')
 
-
 getToken()
+
 while 1:
+    print(crashed)
     getJson()
     print(getInfo())
     time.sleep(2)
