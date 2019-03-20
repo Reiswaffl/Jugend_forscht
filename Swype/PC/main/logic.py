@@ -1,8 +1,9 @@
 import dataWriterReader
 import serialPi
 import mouseControl
-# import spotify.spotifyAPI as spotifyAPI
+#import spotify.spotifyAPI as spotifyAPI
 import time
+import ShortcutHandling
 serial = serialPi.Ser()
 reader = dataWriterReader.Reader()
 mouseSpeed = 1.7
@@ -23,7 +24,7 @@ class Logic:
         return serial.start(com)
 
     def inputHandling(self):
-        incoming_data = serial.getIncomingData()
+        incoming_data = 'SPstartSpotify\n'  # serial.getIncomingData()
         if 'M' in incoming_data:
             print('M')
             global mouseSpeed
@@ -38,10 +39,15 @@ class Logic:
             print('R')
             mouseControl.releaseAll()
         elif 'SC' in incoming_data:
-            print('SC')
+            sc = incoming_data.replace('\n', '').replace('SC', '')
+            shortcut = reader.getSSHbyTag(sc).text
+            ShortcutHandling.handleShortcut(shortcut)
+            print(shortcut)
         elif 'SP' in incoming_data:
-            print('SP')
-
+            sp = incoming_data.replace('\n', '').replace('SP', '')
+            spotcommand = reader.getSSSbyTag(sp).text
+            ShortcutHandling.handleSpotShortcut(spotcommand)
+            print spotcommand
         elif 'S' in incoming_data:
             print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')

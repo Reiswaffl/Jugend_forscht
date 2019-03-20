@@ -11,30 +11,28 @@
         <shortcut command="program" id="7">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
     </saves>
     <shortcuts>
-        <shortcut command="openchrome" id="0">788</shortcut>
-        <shortcut command="openmail" id="1">20</shortcut>
+        <shortcut command="openchrome" id="0">OC:\Shubanuffa\</shortcut>
+        <shortcut command="openmail" id="1">None</shortcut>
         <shortcut command="opencalendar" id="2">1</shortcut>
         <shortcut command="opensticky" id="3">None</shortcut>
         <shortcut command="openspotify" id="4">one</shortcut>
-        <shortcut command="copy" id="5">20</shortcut>
-        <shortcut command="paste" id="6">None</shortcut>
-        <shortcut command="cut" id="7">None</shortcut>
-        <shortcut command="takescreen" id="8">neii</shortcut>
-        <shortcut command="enter" id="9">neii</shortcut>
+        <shortcut command="copy" id="5">copy()</shortcut>
+        <shortcut command="paste" id="6">paste()</shortcut>
+        <shortcut command="cut" id="7">cut()</shortcut>
+        <shortcut command="takescreen" id="8">takescreen()</shortcut>
+        <shortcut command="enter" id="9">enter()</shortcut>
         <shortcut command="opentw" id="10">neii</shortcut>
         <shortcut command="openyt" id="11">neii</shortcut>
-        <shortcut command="S+" id="12">neii</shortcut>
-        <shortcut command="S-" id="13">neii</shortcut>
-        <shortcut command="swipe" id="14">neii</shortcut>
-        <shortcut command="swipe2" id="15">neii</shortcut>
+        <shortcut command="swipe" id="14">leftclick()</shortcut>
+        <shortcut command="swipe2" id="15">rightclick()</shortcut>
         <shortcut command="lc" id="0">neii</shortcut>
         <shortcut command="rc" id="0">neii</shortcut>
         <shortcut command="hc" id="0">neii</shortcut>
     </shortcuts>
     <spotify>
-        <shortcut command="play" id="0">play the Music!</shortcut>
-        <shortcut command="pause" id="1">10</shortcut>
-        <shortcut command="forward" id="2">None</shortcut>
+        <shortcut command="play" id="0">play</shortcut>
+        <shortcut command="pause" id="1">pause bitte</shortcut>
+        <shortcut command="forward" id="2">forward()</shortcut>
         <shortcut command="getValue" id="3">None</shortcut>
         <shortcut command="getVolume" id="4">neii</shortcut>
         <shortcut command="getTitle" id="5">neii</shortcut>

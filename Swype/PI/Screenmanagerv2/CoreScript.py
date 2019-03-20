@@ -10,13 +10,13 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.config import Config
 
 # Import Screens for Kivy
-from Screenmanagerv2.screenclasses.Numpad import *
-from Screenmanagerv2.screenclasses.MainScreen import *
-from Screenmanagerv2.screenclasses.MainScreen2 import *
-from Screenmanagerv2.screenclasses.Calculator import *
-from Screenmanagerv2.screenclasses.Spotify import *
-from Screenmanagerv2.screenclasses.Word import *
-from Screenmanagerv2.SensorThread import *
+from screenclasses.Numpad import *
+from screenclasses.MainScreen import *
+from screenclasses.MainScreen2 import *
+from screenclasses.Calculator import *
+from screenclasses.Spotify import *
+from screenclasses.Word import *
+from SensorThread import *
 
 
 # Touchpad wird initialisiert

@@ -1,5 +1,5 @@
 import threading
-from Screenmanagerv2.ZXsensorController import *
+from ZXsensorController import *
 
 
 class SensorThread(threading.Thread):
