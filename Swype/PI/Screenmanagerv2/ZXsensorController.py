@@ -1,6 +1,6 @@
 # coding=utf-8
 # import smbus
-from Screenmanagerv2.writerScript import *
+from writerScript import *
 
 
 class SensorController:

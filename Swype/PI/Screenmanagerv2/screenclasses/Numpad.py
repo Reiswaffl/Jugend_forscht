@@ -1,6 +1,6 @@
 # coding=utf-8
-from Screenmanagerv2.ScreenHandler import gethome
-from Screenmanagerv2.TouchHandler import *
+from ScreenHandler import gethome
+from TouchHandler import *
 
 
 class Numpad(Screen):

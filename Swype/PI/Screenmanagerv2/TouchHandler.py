@@ -1,7 +1,7 @@
 # encoding=utf-8
 # import RPi.GPIO as GPIO
 from kivy.uix.screenmanager import Screen
-from Screenmanagerv2.writerScript import *
+from writerScript import *
 
 # GPIO.setmode(GPIO.BOARD)
 # GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
