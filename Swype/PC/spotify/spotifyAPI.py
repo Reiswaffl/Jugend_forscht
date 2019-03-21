@@ -24,8 +24,9 @@ oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
 
 authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345) \
  \
- \
-# just needed once (at the start of the program)
+    # just needed once (at the start of the program)
+
+
 def getToken():
     print("Go to: " + authorization_url)
     global authorization_response
@@ -47,7 +48,7 @@ def getJson():
 
 def getInfo():
     global crashed
-    if data != None and crashed == False: # crashed == True if SpotifyAPI breaks
+    if data and not crashed:  # crashed == True if SpotifyAPI breaks
         try:
             items = data["item"]
             songName = items["name"]
@@ -88,10 +89,10 @@ def pause():
 
 def play():
     win32api.keybd_event(mediaPause, hwcode(mediaPause))
+
+
 def get_info_windows():
     windows = []
-
-
 
     # Newer Spotify versions - create an EnumHandler for EnumWindows and flood the list with Chrome_WidgetWin_0s
     def find_spotify_uwp(hwnd, windows):

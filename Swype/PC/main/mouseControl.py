@@ -121,9 +121,9 @@ def releaseAll():
 
 def volume(value):
     try:
-        if value == "s+":
+        if value == "+":
             subprocess.Popen("UP.bat")
-        if value == "s-":
+        if value == "-":
             subprocess.Popen("DOWN.bat")
     except:
         pass
