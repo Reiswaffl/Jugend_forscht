@@ -1,7 +1,6 @@
 import dataWriterReader
 import serialPi
 import mouseControl
-#import spotify.spotifyAPI as spotifyAPI
 import time
 import ShortcutHandling
 serial = serialPi.Ser()
@@ -18,13 +17,14 @@ class Logic:
 
     def __init__(self):
         self.clickcounter = 0
-        # spotifyAPI.getToken()
 
     def start(self, com):
         return serial.start(com)
 
     def inputHandling(self):
-        incoming_data = 'SPstartSpotify\n'  # serial.getIncomingData()
+        incoming_data = serial.getIncomingData()
+        print("Working")
+        print(incoming_data)
         if 'M' in incoming_data:
             print('M')
             global mouseSpeed
@@ -40,12 +40,12 @@ class Logic:
             mouseControl.releaseAll()
         elif 'SC' in incoming_data:
             sc = incoming_data.replace('\n', '').replace('SC', '')
-            shortcut = reader.getSSHbyTag(sc).text
+            shortcut = reader.getSSHbyTag(sc)
             ShortcutHandling.handleShortcut(shortcut)
             print(shortcut)
         elif 'SP' in incoming_data:
-            sp = incoming_data.replace('\n', '').replace('SP', '')
-            spotcommand = reader.getSSSbyTag(sp).text
+            sp = incoming_data.replace('\n', '').replace('SP', '').replace('\r','')
+            spotcommand = reader.getSSSbyTag(sp)
             ShortcutHandling.handleSpotShortcut(spotcommand)
             print spotcommand
         elif 'S' in incoming_data:
@@ -95,20 +95,6 @@ class Logic:
         if 'r' in incoming_data:  # release all mouse buttons
             mouseControl.releaseAll()
 
-    def spotifyHandling(self):  # noch in der Testphase
-        if time.time() - self.last > 1:
-            # one second passed
-            self.last = time.time()
-            self.sendTime(self.progress + self.counter)
-            self.counter += 1
-            if self.counter >= 5:
-                spotifyAPI.getJson()
-                song, artist, self.progress = spotifyAPI.getInfo()
-                self.counter = 0
-                if song != self.lastname:
-                    self.sendAll(song, artist, self.progress)
-                else:
-                    self.sendTime(self.progress)
 
     def writeShortcut(self, id, command, shortcut):
         reader.setCommand(id, command)
@@ -122,6 +108,9 @@ class Logic:
 
     def getShortCut(self, id):
         return reader.getCommand(id), reader.getShortcut(id)
+
+    def getSpotifyInfo(self):
+        return ShortcutHandling.getInfo()
 
     def sendTime(self, time):
         serial.write(time)

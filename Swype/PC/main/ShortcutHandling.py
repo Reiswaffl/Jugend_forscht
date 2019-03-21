@@ -2,7 +2,7 @@ import subprocess
 import webbrowser
 import pyautogui
 import mouseControl
-#import spotify.spotifyAPI as spotifyAPI
+import spotify.spotifyAPI as spotifyAPI
 
 
 def handleShortcut(value):
@@ -32,6 +32,9 @@ def handleSpotShortcut(spotcut):
         eval(spotcut)
     except:
         print('failed to use ' + spotcut)
+
+def startSpotify():
+    spotifyAPI.getToken()
 
 
 def open(path):
@@ -123,3 +126,7 @@ def getTitlelength():
 
 def setVolume(v):
     pass
+
+def getInfo():
+    spotifyAPI.getJson()
+    return spotifyAPI.getInfo()

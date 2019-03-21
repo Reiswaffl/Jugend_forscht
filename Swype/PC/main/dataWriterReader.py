@@ -48,7 +48,7 @@ class Reader:
     def getSSSbyTag(self, tag):
         for child in self.getSpotifyShortcuts():
             if child.get('command') == tag:
-                return child
+                return child.text
         return None
 
     def getSpotifyShortcuts(self):
@@ -70,7 +70,7 @@ class Reader:
             if child.get('id') == id:
                 child.text = value
                 self.doc.write(self.fullname)
-                return child
+                return child.text
         return None
 
     def getSSHasArray(self):  # spotify-shortcuts as array

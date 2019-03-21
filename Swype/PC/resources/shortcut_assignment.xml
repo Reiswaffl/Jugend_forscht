@@ -1,5 +1,5 @@
 <root>
-    <COM com="COM6" />
+    <COM com="COM8" />
     <saves>
         <shortcut command="hotkey" id="0">ctrl+v</shortcut>
         <shortcut command="hotkey" id="1">ctrl+c</shortcut>
@@ -30,15 +30,15 @@
         <shortcut command="hc" id="0">neii</shortcut>
     </shortcuts>
     <spotify>
-        <shortcut command="play" id="0">play</shortcut>
-        <shortcut command="pause" id="1">pause bitte</shortcut>
+        <shortcut command="play" id="0">play()</shortcut>
+        <shortcut command="pause" id="1">pause()</shortcut>
         <shortcut command="forward" id="2">forward()</shortcut>
         <shortcut command="getValue" id="3">None</shortcut>
         <shortcut command="getVolume" id="4">neii</shortcut>
         <shortcut command="getTitle" id="5">neii</shortcut>
-        <shortcut command="back" id="6">neii</shortcut>
+        <shortcut command="back" id="6">back()</shortcut>
         <shortcut command="getRange" id="7">neii</shortcut>
         <shortcut command="v" id="8">neii</shortcut>
-        <shortcut command="startSpotify" id="9">neii</shortcut>
+        <shortcut command="startSpotify" id="9">startSpotify()</shortcut>
     </spotify>
 </root>

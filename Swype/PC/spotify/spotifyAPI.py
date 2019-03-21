@@ -20,14 +20,15 @@ crashed = False
 scope = ['user-read-email', 'user-read-birthdate', 'user-read-playback-state', 'user-modify-playback-state',
          'user-read-currently-playing', 'app-remote-control']
 
-oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
 
-authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345) \
- \
     # just needed once (at the start of the program)
 
 
 def getToken():
+    oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
+
+    authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345)
+
     print("Go to: " + authorization_url)
     global authorization_response
     authorization_response = raw_input('Enter the full callback URL: ')
@@ -40,6 +41,7 @@ def getToken():
 
 def getJson():
     try:
+        global oauth
         global data
         result = oauth.get('https://api.spotify.com/v1/me/player')  # returns informations
         data = json.loads(result.text)  # convert to json
@@ -115,10 +117,3 @@ def get_info_windows():
         except:
             print('Error')
 
-getToken()
-
-while 1:
-    print(crashed)
-    getJson()
-    print(getInfo())
-    time.sleep(2)
