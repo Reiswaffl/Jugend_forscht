@@ -1,4 +1,5 @@
-from main import ShortcutHandling
+from spotify import spotifyAPI
 
-ShortcutHandling.startSpotify()
-print ShortcutHandling.getTitle()
+spotifyAPI.getToken()
+spotifyAPI.getJson()
+spotifyAPI.setVolume()

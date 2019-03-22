@@ -120,8 +120,16 @@ def getVolume():
         return None
 
 def getTitle():
-    info = getInfo()
-    print(info)
-    for e in info:
-        print(e)
-    return info
+    return getInfo()[0]
+
+def getArtist():
+    return getInfo()[1]
+
+def getProgess():
+    if data != None and not crashed:
+        return str(data["progress_ms"] / 1000)
+    else:
+        return None
+
+def setVolume():
+    oauth.post('https://api.spotify.com/v1/me/player/volume')

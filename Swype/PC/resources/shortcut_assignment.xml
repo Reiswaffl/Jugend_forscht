@@ -36,9 +36,12 @@
         <shortcut command="getValue" id="3">None</shortcut>
         <shortcut command="getVolume" id="4">getVolume()</shortcut>
         <shortcut command="getTitle" id="5">getTitle()</shortcut>
+        <shortcut command="getArtist" id="10">getArtist()</shortcut>
+        <shortcut command="getProgress" id="11">getProgress()</shortcut>
         <shortcut command="back" id="6">back()</shortcut>
         <shortcut command="getRange" id="7">neii</shortcut>
         <shortcut command="v" id="8">neii</shortcut>
         <shortcut command="startSpotify" id="9">startSpotify()</shortcut>
+        <shortcut command="updateJson" id="12">updateJson()</shortcut>
     </spotify>
 </root>

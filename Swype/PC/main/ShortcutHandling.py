@@ -116,6 +116,11 @@ def getVolume():
 def getTitle():
     return spotifyAPI.getTitle()
 
+def getArtist():
+    return spotifyAPI.getArtist()
+
+def getProgress():
+    return spotifyAPI.getProgess()
 
 def back():
     spotifyAPI.lastSong()
@@ -131,3 +136,6 @@ def setVolume(v):
 def getInfo():
     spotifyAPI.getJson()
     return spotifyAPI.getInfo()
+
+def updateJson():
+    spotifyAPI.getJson()
