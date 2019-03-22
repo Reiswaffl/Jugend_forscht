@@ -19,15 +19,12 @@ redirect_uri = "https://lvh.me/"  # directs to 127.0.0.1
 crashed = False
 scope = ['user-read-email', 'user-read-birthdate', 'user-read-playback-state', 'user-modify-playback-state',
          'user-read-currently-playing', 'app-remote-control']
-
-
+oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
+authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345)
     # just needed once (at the start of the program)
 
 
 def getToken():
-    oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
-
-    authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345)
 
     print("Go to: " + authorization_url)
     global authorization_response
@@ -41,7 +38,6 @@ def getToken():
 
 def getJson():
     try:
-        global oauth
         global data
         result = oauth.get('https://api.spotify.com/v1/me/player')  # returns informations
         data = json.loads(result.text)  # convert to json
@@ -53,10 +49,10 @@ def getInfo():
     if data and not crashed:  # crashed == True if SpotifyAPI breaks
         try:
             items = data["item"]
-            songName = items["name"]
-            artist = items["artists"][0]["name"]
+            songName = str(items["name"])
+            artist = str(items["artists"][0]["name"])
             progress = str(data["progress_ms"] / 1000)
-            volume = data["device"]["volume_percent"]
+            volume = str(data["device"]["volume_percent"])
             #print("Song: " + songName + " Artist: " + str(artist) + " Progress: " + progress + " Volume in percent: " + volume)
             return songName, artist, progress, volume
         except:
@@ -65,6 +61,7 @@ def getInfo():
                     'https://accounts.spotify.com/api/token',
                     authorization_response=authorization_response,
                     client_secret=client_secret)
+                print("Failed")
                 return None, None, None, None
             except:
                 crashed = True
@@ -112,8 +109,19 @@ def get_info_windows():
             return "Error", "Nothing playing"
         try:
             artist, track = text.split(" - ", 1)
-            #print( artist, track )
             return artist,track
         except:
             print('Error')
 
+def getVolume():
+    if data != None and not crashed:
+        return data["device"]["volume_percent"]
+    else:
+        return None
+
+def getTitle():
+    info = getInfo()
+    print(info)
+    for e in info:
+        print(e)
+    return info

@@ -35,6 +35,7 @@ def handleSpotShortcut(spotcut):
 
 def startSpotify():
     spotifyAPI.getToken()
+    spotifyAPI.getJson()
 
 
 def open(path):
@@ -109,11 +110,11 @@ def getValue():
 
 
 def getVolume():
-    pass
+    return spotifyAPI.getVolume()
 
 
 def getTitle():
-    pass
+    return spotifyAPI.getTitle()
 
 
 def back():

@@ -23,7 +23,6 @@ class Logic:
 
     def inputHandling(self):
         incoming_data = serial.getIncomingData()
-        print("Working")
         print(incoming_data)
         if 'M' in incoming_data:
             print('M')

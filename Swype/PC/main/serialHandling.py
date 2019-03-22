@@ -8,13 +8,15 @@ lastname = None
 logic = logic.Logic()
 logic.start(logic.getCOM())
 while True:
+    print("Running")
     logic.inputHandling()
     try:
         if time.time() - last > 1:
+
             # one second passed
             last = time.time()
             #logic.sendTime(progress + counter)
-            print(progress,time)
+            print(progress)
             counter += 1
             if counter >= 5:
                 song, artist, progress = logic.getSpotifyInfo()
@@ -26,7 +28,6 @@ while True:
                 else:
                     print(progress)
                     #logic.sendTime(progress)\
-        print(time.time() - last)
     except:
         print('Didnt work')
     time.sleep(0.0001)

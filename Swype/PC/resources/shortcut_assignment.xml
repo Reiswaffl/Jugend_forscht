@@ -34,8 +34,8 @@
         <shortcut command="pause" id="1">pause()</shortcut>
         <shortcut command="forward" id="2">forward()</shortcut>
         <shortcut command="getValue" id="3">None</shortcut>
-        <shortcut command="getVolume" id="4">neii</shortcut>
-        <shortcut command="getTitle" id="5">neii</shortcut>
+        <shortcut command="getVolume" id="4">getVolume()</shortcut>
+        <shortcut command="getTitle" id="5">getTitle()</shortcut>
         <shortcut command="back" id="6">back()</shortcut>
         <shortcut command="getRange" id="7">neii</shortcut>
         <shortcut command="v" id="8">neii</shortcut>

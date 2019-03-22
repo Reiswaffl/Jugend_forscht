@@ -2,6 +2,8 @@
 #define last 4
 #define play 5
 #define start 2
+#define superbutton 6
+
 #define green 10
 #define yellow 9
 #define red 8
@@ -31,4 +33,6 @@ void loop() {
   delay(500);}
   if(digitalRead(start) == LOW){Serial.println("SPstartSpotify");
   delay(500);}
+  if(digitalRead(superbutton) == LOW){Serial.println("----");
+  delay(50);}
 }
