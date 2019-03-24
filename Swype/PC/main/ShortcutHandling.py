@@ -131,7 +131,7 @@ def getTitlelength():
 
 
 def setVolume(v):
-    pass
+    spotifyAPI.setVolume(v)
 
 def getInfo():
     spotifyAPI.getJson()

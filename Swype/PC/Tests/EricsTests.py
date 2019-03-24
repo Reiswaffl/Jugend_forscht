@@ -1,5 +1,5 @@
 from spotify import spotifyAPI
+from main import ShortcutHandling
 
-spotifyAPI.getToken()
-spotifyAPI.getJson()
-spotifyAPI.setVolume()
+ShortcutHandling.startSpotify()
+ShortcutHandling.setVolume(0)

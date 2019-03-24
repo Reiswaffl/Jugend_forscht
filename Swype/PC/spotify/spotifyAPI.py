@@ -131,5 +131,6 @@ def getProgess():
     else:
         return None
 
-def setVolume():
-    oauth.post('https://api.spotify.com/v1/me/player/volume')
+def setVolume(v):
+    string = oauth.put('https://api.spotify.com/v1/me/player/volume?volume_percent=' + str(v))
+    print(string)
