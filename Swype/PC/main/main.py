@@ -1,5 +1,4 @@
 import UserInterface
 
-interface = UserInterface.UserInterface()
-interface.buildInterface()
+interface = UserInterface.DisplayingClass()
 interface.mainloop()
