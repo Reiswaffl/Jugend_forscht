@@ -12,10 +12,10 @@
     </saves>
     <shortcuts>
         <shortcut command="openchrome" id="0">OC:\Program Files (x86)\Google\Chrome\Application\chrome.exe</shortcut>
-        <shortcut command="openmail" id="1">O</shortcut>
-        <shortcut command="opencalendar" id="2">O</shortcut>
+        <shortcut command="openmail" id="1">OC:\Desktop\Programms\Mail.lnk</shortcut>
+        <shortcut command="opencalendar" id="2">OC:\Desktop\Programms\Kalender.lnk</shortcut>
         <shortcut command="opensticky" id="3">OC:\Desktop\Programms\Sticky Notes.lnk</shortcut>
-        <shortcut command="openspotify" id="4">one</shortcut>
+        <shortcut command="openspotify" id="4" />
         <shortcut command="copy" id="5">copy()</shortcut>
         <shortcut command="paste" id="6">paste()</shortcut>
         <shortcut command="cut" id="7">cut()</shortcut>
@@ -28,6 +28,7 @@
         <shortcut command="lc" id="14">leftclick()</shortcut>
         <shortcut command="rc" id="15">rightclick()</shortcut>
         <shortcut command="hc" id="16">holdleeftclick()</shortcut>
+        <shortcut command="openword" id="17">OC:\Desktop\Programms\Word.lnk</shortcut>
     </shortcuts>
     <spotify>
         <shortcut command="play" id="0">play()</shortcut>

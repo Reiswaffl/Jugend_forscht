@@ -3,6 +3,7 @@ import webbrowser
 import pyautogui
 import mouseControl
 import spotify.spotifyAPI as spotifyAPI
+import os
 
 
 def handleShortcut(value):
@@ -40,7 +41,11 @@ def startSpotify():
 
 
 def open(path):
-    subprocess.Popen(path)
+    try:
+        subprocess.Popen(path)
+    except:
+        os.startfile(path)
+        print('os.startfile')
 
 
 def openWebsite(url):
