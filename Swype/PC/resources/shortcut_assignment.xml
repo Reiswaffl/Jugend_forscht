@@ -1,5 +1,5 @@
 <root>
-    <COM com="COM8" />
+    <COM com="COM6" />
     <saves>
         <shortcut command="hotkey" id="0">ctrl+v</shortcut>
         <shortcut command="hotkey" id="1">ctrl+c</shortcut>
@@ -11,37 +11,37 @@
         <shortcut command="program" id="7">C:\umlet-standalone-14.3.0\Umlet\Umlet.exe</shortcut>
     </saves>
     <shortcuts>
-        <shortcut command="openchrome" id="0">OC:\Shubanuffa\</shortcut>
-        <shortcut command="openmail" id="1">None</shortcut>
-        <shortcut command="opencalendar" id="2">1</shortcut>
-        <shortcut command="opensticky" id="3">None</shortcut>
+        <shortcut command="openchrome" id="0">OC:\Program Files (x86)\Google\Chrome\Application\chrome.exe</shortcut>
+        <shortcut command="openmail" id="1">O</shortcut>
+        <shortcut command="opencalendar" id="2">O</shortcut>
+        <shortcut command="opensticky" id="3">OC:\Desktop\Programms\Sticky Notes.lnk</shortcut>
         <shortcut command="openspotify" id="4">one</shortcut>
         <shortcut command="copy" id="5">copy()</shortcut>
         <shortcut command="paste" id="6">paste()</shortcut>
         <shortcut command="cut" id="7">cut()</shortcut>
         <shortcut command="takescreen" id="8">takescreen()</shortcut>
         <shortcut command="enter" id="9">enter()</shortcut>
-        <shortcut command="opentw" id="10">neii</shortcut>
-        <shortcut command="openyt" id="11">neii</shortcut>
-        <shortcut command="swipe" id="14">leftclick()</shortcut>
-        <shortcut command="swipe2" id="15">rightclick()</shortcut>
-        <shortcut command="lc" id="0">neii</shortcut>
-        <shortcut command="rc" id="0">neii</shortcut>
-        <shortcut command="hc" id="0">neii</shortcut>
+        <shortcut command="opentw" id="10">Wtwitter.com</shortcut>
+        <shortcut command="openyt" id="11">Wyoutube.com</shortcut>
+        <shortcut command="swipe" id="12">false</shortcut>
+        <shortcut command="swipe2" id="13">false</shortcut>
+        <shortcut command="lc" id="14">leftclick()</shortcut>
+        <shortcut command="rc" id="15">rightclick()</shortcut>
+        <shortcut command="hc" id="16">holdleeftclick()</shortcut>
     </shortcuts>
     <spotify>
         <shortcut command="play" id="0">play()</shortcut>
         <shortcut command="pause" id="1">pause()</shortcut>
         <shortcut command="forward" id="2">forward()</shortcut>
-        <shortcut command="getValue" id="3">None</shortcut>
+        <shortcut command="getValue" id="3">getValue()</shortcut>
         <shortcut command="getVolume" id="4">getVolume()</shortcut>
         <shortcut command="getTitle" id="5">getTitle()</shortcut>
-        <shortcut command="getArtist" id="10">getArtist()</shortcut>
-        <shortcut command="getProgress" id="11">getProgress()</shortcut>
-        <shortcut command="back" id="6">back()</shortcut>
-        <shortcut command="getRange" id="7">neii</shortcut>
-        <shortcut command="v" id="8">neii</shortcut>
-        <shortcut command="startSpotify" id="9">startSpotify()</shortcut>
+        <shortcut command="getArtist" id="6">getArtist()</shortcut>
+        <shortcut command="getProgress" id="7">getProgress()</shortcut>
+        <shortcut command="back" id="8">back()</shortcut>
+        <shortcut command="getRange" id="9">false</shortcut>
+        <shortcut command="v" id="10">false</shortcut>
+        <shortcut command="startSpotify" id="11">startSpotify()</shortcut>
         <shortcut command="updateJson" id="12">updateJson()</shortcut>
     </spotify>
 </root>

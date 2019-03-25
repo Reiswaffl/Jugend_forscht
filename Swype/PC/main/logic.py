@@ -39,7 +39,7 @@ class Logic:
             mouseControl.releaseAll()
         elif 'SC' in incoming_data:
             sc = incoming_data.replace('\n', '').replace('SC', '')
-            shortcut = reader.getSSHbyTag(sc)
+            shortcut = reader.getSSHbyTag(sc).text
             ShortcutHandling.handleShortcut(shortcut)
             print(shortcut)
         elif 'SP' in incoming_data:

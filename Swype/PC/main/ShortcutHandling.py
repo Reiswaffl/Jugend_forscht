@@ -9,14 +9,14 @@ def handleShortcut(value):
     if 'O' in value:
         print('open')
         try:
-            value.replace('O', '')
-            eval(value)
+            value = value.replace('O', '')
+            open(value)
         except:
             print('failed to find ' + value)
     elif 'W' in value:
         print('website')
         try:
-            value.replace('W', '')
+            value = value.replace('W', '')
             openWebsite(value)
         except:
             print('failed to open ' + value)
@@ -24,7 +24,7 @@ def handleShortcut(value):
         try:
             eval(value)
         except:
-            print('failed to run ' + value)
+            print('failed to run ' + str(value))
 
 
 def handleSpotShortcut(spotcut):
@@ -32,6 +32,7 @@ def handleSpotShortcut(spotcut):
         eval(spotcut)
     except:
         print('failed to use ' + spotcut)
+
 
 def startSpotify():
     spotifyAPI.getToken()
@@ -116,11 +117,14 @@ def getVolume():
 def getTitle():
     return spotifyAPI.getTitle()
 
+
 def getArtist():
     return spotifyAPI.getArtist()
 
+
 def getProgress():
     return spotifyAPI.getProgess()
+
 
 def back():
     spotifyAPI.lastSong()
@@ -133,9 +137,11 @@ def getTitlelength():
 def setVolume(v):
     spotifyAPI.setVolume(v)
 
+
 def getInfo():
     spotifyAPI.getJson()
     return spotifyAPI.getInfo()
+
 
 def updateJson():
     spotifyAPI.getJson()
