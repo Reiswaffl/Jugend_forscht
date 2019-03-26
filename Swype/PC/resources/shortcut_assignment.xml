@@ -15,7 +15,7 @@
         <shortcut command="openmail" id="1">OC:\Desktop\Programms\Mail.lnk</shortcut>
         <shortcut command="opencalendar" id="2">OC:\Desktop\Programms\Kalender.lnk</shortcut>
         <shortcut command="opensticky" id="3">OC:\Desktop\Programms\Sticky Notes.lnk</shortcut>
-        <shortcut command="openspotify" id="4" />
+        <shortcut command="openspotify" id="4">OC:\Desktop\Programms\Spotify.lnk</shortcut>
         <shortcut command="copy" id="5">copy()</shortcut>
         <shortcut command="paste" id="6">paste()</shortcut>
         <shortcut command="cut" id="7">cut()</shortcut>
@@ -23,11 +23,11 @@
         <shortcut command="enter" id="9">enter()</shortcut>
         <shortcut command="opentw" id="10">Wtwitter.com</shortcut>
         <shortcut command="openyt" id="11">Wyoutube.com</shortcut>
-        <shortcut command="swipe" id="12">false</shortcut>
-        <shortcut command="swipe2" id="13">false</shortcut>
+        <shortcut command="swipe" id="12">browserback()</shortcut>
+        <shortcut command="swipe2" id="13">browserforward()</shortcut>
         <shortcut command="lc" id="14">leftclick()</shortcut>
         <shortcut command="rc" id="15">rightclick()</shortcut>
-        <shortcut command="hc" id="16">holdleeftclick()</shortcut>
+        <shortcut command="hc" id="16">holdleftclick()</shortcut>
         <shortcut command="openword" id="17">OC:\Desktop\Programms\Word.lnk</shortcut>
     </shortcuts>
     <spotify>

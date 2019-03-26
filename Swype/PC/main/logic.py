@@ -25,17 +25,17 @@ class Logic:
         incoming_data = serial.getIncomingData()
         print(incoming_data)
         if 'M' in incoming_data:
-            print('M')
+            #print('M')
             global mouseSpeed
             movement = incoming_data.replace('\n', '').replace('M', '')
             x, y = movement.split(',')
             mouseControl.handleMouse(x, y, mouseSpeed)
         elif 'W' in incoming_data:
-            print('W')
+            #print('W')
             key = incoming_data.replace('\n', '').replace('W', '')
             mouseControl.write(key)
         elif 'R' in incoming_data:
-            print('R')
+            #print('R')
             mouseControl.releaseAll()
         elif 'SC' in incoming_data:
             sc = incoming_data.replace('\n', '').replace('SC', '')
@@ -46,9 +46,9 @@ class Logic:
             sp = incoming_data.replace('\n', '').replace('SP', '').replace('\r','')
             spotcommand = reader.getSSSbyTag(sp)
             ShortcutHandling.handleSpotShortcut(spotcommand)
-            print spotcommand
+            #print spotcommand
         elif 'S' in incoming_data:
-            print('S')
+            #print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')
             mouseControl.volume(volume)
 

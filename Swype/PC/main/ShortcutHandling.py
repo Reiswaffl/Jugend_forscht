@@ -83,12 +83,12 @@ def browserback():
     pyautogui.press('browserback')
 
 
-def brwoserforward():
-    pyautogui.press('brwoserforward')
+def browserforward():
+    pyautogui.press('browserforward')
 
 
 def rightclick():
-    mouseControl.rightDown()
+    mouseControl.rightClick()
 
 
 def leftclick():

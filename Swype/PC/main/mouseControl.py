@@ -76,13 +76,14 @@ def write(key):
 
 def click():
     global leftup
-    try:
-        if leftup:
-            win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-            leftup = False
-    except:
-        print("click failed")
-        pass
+    if leftup:
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
+        leftup = False
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
+        leftup = True
+    #except:
+     #   print("click failed")
+      #  pass
 
 
 def leftDown():
@@ -95,12 +96,14 @@ def leftDown():
         pass
 
 
-def rightDown():
+def rightClick():
     global rightup
     try:
         if rightup:
             win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
             rightup = False
+            win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
+            rightup = True
     except:
         pass
 
