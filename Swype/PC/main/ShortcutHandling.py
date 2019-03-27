@@ -74,9 +74,15 @@ def enter():
 
 def S(value):
     if value == "+":
-        subprocess.Popen("UP.bat")
+        #subprocess.Popen("UP.bat")
+        pyautogui.hotkey('volumeup')
+        pyautogui.hotkey('volumeup')
+        pyautogui.hotkey('volumeup')
     if value == "-":
-        subprocess.Popen("DOWN.bat")
+        #subprocess.Popen("DOWN.bat")
+        pyautogui.hotkey('volumedown')
+        pyautogui.hotkey('volumedown')
+        pyautogui.hotkey('volumedown')
 
 
 def browserback():

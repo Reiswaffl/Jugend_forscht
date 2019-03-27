@@ -92,8 +92,12 @@ def releaseAll():
 def volume(value):
     try:
         if value == "+":
-            subprocess.Popen("UP.bat")
+            #subprocess.Popen("UP.bat")
+            pyautogui.hotkey('volumeup')
+            #pyautogui.hotkey('volumeup')
+            #pyautogui.hotkey('volumeup')
         if value == "-":
-            subprocess.Popen("DOWN.bat")
+            #subprocess.Popen("DOWN.bat")
+            pyautogui.hotkey('volumedown')
     except:
         pass
