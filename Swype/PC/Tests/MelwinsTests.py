@@ -1,4 +1,9 @@
-from main import UserInterface
+from main.ShortcutHandling import copy, paste, cut
+import time
 
-interface = UserInterface.DisplayingClass()
-interface.mainloop()
+time.sleep(3)
+cut()
+print('c')
+time.sleep(1)
+paste()
+print('p')

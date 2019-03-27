@@ -53,15 +53,15 @@ def openWebsite(url):
 
 
 def copy():
-    pyautogui.hotkey('str', 'c')
+    pyautogui.hotkey('ctrl', 'c')
 
 
 def paste():
-    pyautogui.hotkey('str', 'v')
+    pyautogui.hotkey('ctrl', 'v')
 
 
 def cut():
-    pyautogui.hotkey('str', 'x')
+    pyautogui.hotkey('ctrl', 'x')
 
 
 def takescreen():
@@ -150,3 +150,15 @@ def getInfo():
 
 def updateJson():
     spotifyAPI.getJson()
+
+
+def underline():
+    pyautogui.hotkey('ctrl', 'shift', 'u')
+
+
+def bold():
+    pyautogui.hotkey('ctrl', 'shift', 'f')
+
+
+def italic():
+    pyautogui.hotkey('ctrl', 'shift', 'k')
