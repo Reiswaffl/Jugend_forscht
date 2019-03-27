@@ -29,6 +29,9 @@
         <shortcut command="rc" id="15">rightclick()</shortcut>
         <shortcut command="hc" id="16">holdleftclick()</shortcut>
         <shortcut command="openword" id="17">OC:\Desktop\Programms\Word.lnk</shortcut>
+        <shortcut command="bold" id="18">bold()</shortcut>
+        <shortcut command="underline" id="19">underline()</shortcut>
+        <shortcut command="italic" id="20">italic()</shortcut>
     </shortcuts>
     <spotify>
         <shortcut command="play" id="0">None</shortcut>
