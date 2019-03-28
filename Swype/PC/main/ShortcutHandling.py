@@ -136,7 +136,8 @@ def getArtist():
 def getProgress():
     return spotifyAPI.getProgess()
 
-
+def isPlaying(): #bool-value
+    return spotifyAPI.isPlaying()
 def back():
     spotifyAPI.lastSong()
 

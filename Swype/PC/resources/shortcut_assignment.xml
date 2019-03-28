@@ -47,5 +47,6 @@
         <shortcut command="v" id="10">None</shortcut>
         <shortcut command="startSpotify" id="11">None</shortcut>
         <shortcut command="updateJson" id="12">None</shortcut>
+        <shortcut command="isPlaying" id="13">isPlaying()</shortcut>
     </spotify>
 </root>
