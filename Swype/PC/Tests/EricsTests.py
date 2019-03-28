@@ -1,5 +1,6 @@
 from spotify import spotifyAPI
-from main import ShortcutHandling
+import time
 
-ShortcutHandling.startSpotify()
-ShortcutHandling.setVolume(0)
+print spotifyAPI.test()
+time.sleep(5)
+print spotifyAPI.test()

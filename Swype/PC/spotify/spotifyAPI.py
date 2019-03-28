@@ -134,3 +134,12 @@ def getProgess():
 def setVolume(v):
     string = oauth.put('https://api.spotify.com/v1/me/player/volume?volume_percent=' + str(v))
     print(string)
+
+def isPlaying():
+    if data != None and not crashed: #spotify API is available
+        return bool(data["is_playing"])
+    else:                            #spotify API is not available
+        if "Error" in get_info_windows():
+            return False
+        else:
+            return True
