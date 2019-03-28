@@ -43,5 +43,6 @@
         <shortcut command="v" id="8">neii</shortcut>
         <shortcut command="startSpotify" id="9">startSpotify()</shortcut>
         <shortcut command="updateJson" id="12">updateJson()</shortcut>
+        <shortcut command="setVolume" id="13">setVolume()</shortcut>
     </spotify>
 </root>
