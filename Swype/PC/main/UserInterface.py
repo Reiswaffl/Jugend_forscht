@@ -133,12 +133,12 @@ class UserInterface(tkr.Tk):
         self.cmd[6].set(self.COMMAND[0])
         self.cmd[7].set(self.COMMAND[0])
 
-    def select(self):
-        for i in range(8):
-            if self.cmd[i].get() == "scroll":
-                self.logic.writeShortcut(str(i), self.cmd[i].get(), "i" + self.shortcut[i].get())
-            else:
-                self.logic.writeShortcut(str(i), self.cmd[i].get(), self.shortcut[i].get())
+    #def select(self):
+    #    for i in range(8):
+    #        if self.cmd[i].get() == "scroll":
+    #            self.logic.writeShortcut(str(i), self.cmd[i].get(), "i" + self.shortcut[i].get())
+    #        else:
+    #            self.logic.writeShortcut(str(i), self.cmd[i].get(), self.shortcut[i].get())
 
     def start(self):
         if not self.serialRunning:

@@ -8,7 +8,7 @@ lastname = None
 logic = logic.Logic()
 logic.start(logic.getCOM())
 while True:
-    print("Running")
+    # print("Running")
     logic.inputHandling()
     try:
         if time.time() - last > 1:
