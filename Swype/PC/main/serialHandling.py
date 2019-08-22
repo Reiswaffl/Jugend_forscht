@@ -10,7 +10,7 @@ logic.start(logic.getCOM())
 while True:
     # print("Running")
     logic.inputHandling()
-    try:
+    '''try:
         if time.time() - last > 1:
 
             # one second passed
@@ -27,7 +27,8 @@ while True:
                     lastname = song
                 else:
                     print(progress)
-                    #logic.sendTime(progress)\
+                    #logic.sendTime(progress)\'
+                    
     except:
-        print('Didnt work')
+        print('Didnt work') '''
     time.sleep(0.0001)

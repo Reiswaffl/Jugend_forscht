@@ -51,6 +51,8 @@ class Logic:
             #print('S')
             volume = incoming_data.replace('\n', '').replace('S', '')
             mouseControl.volume(volume)
+        else:
+            print('false input')
 
     def getCOM(self):
         return reader.getCOM()

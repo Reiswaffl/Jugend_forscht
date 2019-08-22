@@ -21,11 +21,12 @@ scope = ['user-read-email', 'user-read-birthdate', 'user-read-playback-state', '
          'user-read-currently-playing', 'app-remote-control']
 oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scope)
 authorization_url, state = oauth.authorization_url('https://accounts.spotify.com/authorize', 12345)
-    # just needed once (at the start of the program)
+
+
+# just needed once (at the start of the program)
 
 
 def getToken():
-
     print("Go to: " + authorization_url)
     global authorization_response
     authorization_response = raw_input('Enter the full callback URL: ')
@@ -44,6 +45,7 @@ def getJson():
     except:
         pass
 
+
 def getInfo():
     global crashed
     if data and not crashed:  # crashed == True if SpotifyAPI breaks
@@ -53,7 +55,7 @@ def getInfo():
             artist = str(items["artists"][0]["name"])
             progress = str(data["progress_ms"] / 1000)
             volume = str(data["device"]["volume_percent"])
-            #print("Song: " + songName + " Artist: " + str(artist) + " Progress: " + progress + " Volume in percent: " + volume)
+            # print("Song: " + songName + " Artist: " + str(artist) + " Progress: " + progress + " Volume in percent: " + volume)
             return songName, artist, progress, volume
         except:
             try:
@@ -65,8 +67,8 @@ def getInfo():
                 return None, None, None, None
             except:
                 crashed = True
-    else: # SpotifyAPI broke
-        return get_info_windows(),None,None
+    else:  # SpotifyAPI broke
+        return get_info_windows(), None, None
 
 
 def hwcode(Media):
@@ -109,9 +111,10 @@ def get_info_windows():
             return "Error", "Nothing playing"
         try:
             artist, track = text.split(" - ", 1)
-            return artist,track
+            return artist, track
         except:
             print('Error')
+
 
 def getVolume():
     if data != None and not crashed:
@@ -119,17 +122,21 @@ def getVolume():
     else:
         return None
 
+
 def getTitle():
     return getInfo()[0]
 
+
 def getArtist():
     return getInfo()[1]
+
 
 def getProgess():
     if data != None and not crashed:
         return str(data["progress_ms"] / 1000)
     else:
         return None
+
 
 def setVolume(v):
     string = oauth.put('https://api.spotify.com/v1/me/player/volume?volume_percent=' + str(v))
