@@ -34,18 +34,19 @@
         <shortcut command="italic" id="20">italic()</shortcut>
     </shortcuts>
     <spotify>
-        <shortcut command="play" id="0">None1</shortcut>
-        <shortcut command="pause" id="1">2</shortcut>
-        <shortcut command="forward" id="2">3</shortcut>
-        <shortcut command="getValue" id="3">4</shortcut>
-        <shortcut command="getVolume" id="4">5</shortcut>
-        <shortcut command="getTitle" id="5">6</shortcut>
-        <shortcut command="getArtist" id="6">7</shortcut>
-        <shortcut command="getProgress" id="7">8</shortcut>
-        <shortcut command="back" id="8">9</shortcut>
-        <shortcut command="getRange" id="9">10</shortcut>
-        <shortcut command="v" id="10">11</shortcut>
-        <shortcut command="startSpotify" id="11">12</shortcut>
-        <shortcut command="updateJson" id="12">13</shortcut>
+        <shortcut command="play" id="0">None</shortcut>
+        <shortcut command="pause" id="1">None</shortcut>
+        <shortcut command="forward" id="2">None</shortcut>
+        <shortcut command="getValue" id="3">None</shortcut>
+        <shortcut command="getVolume" id="4">None</shortcut>
+        <shortcut command="getTitle" id="5">None</shortcut>
+        <shortcut command="getArtist" id="6">None</shortcut>
+        <shortcut command="getProgress" id="7">None</shortcut>
+        <shortcut command="back" id="8">None</shortcut>
+        <shortcut command="getRange" id="9">None</shortcut>
+        <shortcut command="v" id="10">None</shortcut>
+        <shortcut command="startSpotify" id="11">None</shortcut>
+        <shortcut command="updateJson" id="12">None</shortcut>
+        <shortcut command="isPlaying" id="13">isPlaying()</shortcut>
     </spotify>
 </root>
